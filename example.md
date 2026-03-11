@@ -126,7 +126,7 @@ schedule:
 
         23. **US Data Protection Laws** means the CCPA, the Colorado Privacy Act, Colorado Rev. Stat. 6-1-1301 et seq. (the **CPA**); the Connecticut Act Concerning Personal Data Protection and Online Monitoring, Conn. PA 22-15 § 1 et seq. (the **PDPOM**); Iowa Consumer Data Protection Act, S.J. 708 (the **ICDPA**); the Indiana Consumer Data Protection Act, S.B. 5 (the **INCDPA**); the Montana Consumer Data Privacy Act, S.B. 384 (the **MCDPA**); the Tennessee Information Protection Act, H.B. 1181 (the **TIPA**); the Utah Consumer Privacy Act, Utah Code 13-61-101 et seq. (the **UCPA**); the Virginia Consumer Data Protection Act, Code of Virginia title 59.1, Chapter 52 (the **VCDPA**); the Fair Credit Reporting Act, 15 U.S.C. § 1681 et seq.; the Gramm-Leach-Bliley Act, 15 U.S.C. § 6801 et seq.; the Children's Online Privacy Protection Act, 15 U.S.C. § 6501 et seq.; Section 5 of the FTC Act, 15 U.S.C. § 45 and any applicable guidance issued by the U.S. Federal Trade Commission, and any data protection or privacy laws of the United States of America and any states therein.
 
-    2. The terms used in this Addendum shall have the meanings set forth in this Addendum, and their cognate terms shall be construed accordingly. Capitalised terms not otherwise defined herein shall have the meaning given to them in the Principal Agreement. Except as modified below, the terms of the Principal Agreement shall remain in full force and effect.
+    2. The terms used in this Agreement shall have the meanings set forth in this Agreement, and their cognate terms shall be construed accordingly. Capitalised terms not otherwise defined herein shall have the meaning given to them in the Principal Agreement. Except as modified below, the terms of the Principal Agreement shall remain in full force and effect.
 
     3. The terms **Commission**, **Controller**, **Member State**, and **Supervisory Authority** shall have the same meaning as in the GDPR or UK-GDPR as context requires, and their cognate terms shall be construed accordingly.
 
@@ -134,7 +134,7 @@ schedule:
 
 2. ## Authority {#authority}
 
-    1. Google warrants and represents that, before any Google Affiliate Processes any Merchant Personal Data on behalf of any Merchant Group Member, Google's entry into this Addendum as agent for and on behalf of that Google Affiliate will have been duly and effectively authorised (or subsequently ratified) by that Google Affiliate.
+    1. Google warrants and represents that, before any Google Affiliate Processes any Merchant Personal Data on behalf of any Merchant Group Member, Google's entry into this Agreement as agent for and on behalf of that Google Affiliate will have been duly and effectively authorised (or subsequently ratified) by that Google Affiliate.
 
 3. ## Processing of Merchant Personal Data {#processing}
 
@@ -182,7 +182,7 @@ schedule:
 
     1. Each Merchant Group Member authorises Google and each Google Affiliate to appoint (and permit each Subprocessor appointed in accordance with [this clause](#subprocessing) to appoint) Subprocessors in accordance with [this clause](#subprocessing) and any restrictions in the Principal Agreement.
 
-    2. Google and each Google Affiliate may continue to use those Subprocessors already engaged by Google or any Google Affiliate as at the date of this Addendum, subject to Google and each Google Affiliate in each case as soon as practicable meeting the obligations set out in [clause 3.2](#processing-instructions). {#subprocessing-existing}
+    2. Google and each Google Affiliate may continue to use those Subprocessors already engaged by Google or any Google Affiliate as at the date of this Agreement, subject to Google and each Google Affiliate in each case as soon as practicable meeting the obligations set out in [clause 3.2](#processing-instructions). {#subprocessing-existing}
 
     3. Google shall give Merchant prior written notice of the appointment of any new Subprocessor, including full details of the Processing to be undertaken by the Subprocessor. If, within the Objection Period of receipt of that notice, Merchant notifies Google in writing of any objections (on reasonable grounds) to the proposed appointment. {#subprocessor-notice}
 
@@ -192,11 +192,11 @@ schedule:
 
         1. before the Subprocessor first Processes Merchant Personal Data (or, where relevant, in accordance with [clause 2](#authority)), carry out adequate due diligence to ensure that the Subprocessor is capable of providing the level of protection for Merchant Personal Data required by the Principal Agreement;
 
-        2. ensure that the arrangement between on the one hand Google, or the relevant Google Affiliate, or the relevant intermediate Subprocessor; and on the other hand the Subprocessor, is governed by a written contract including terms which offer at least the same level of protection for Merchant Personal Data as those set out in this Addendum and meet the requirements of the Applicable Laws; and
+        2. ensure that the arrangement between on the one hand Google, or the relevant Google Affiliate, or the relevant intermediate Subprocessor; and on the other hand the Subprocessor, is governed by a written contract including terms which offer at least the same level of protection for Merchant Personal Data as those set out in this Agreement and meet the requirements of the Applicable Laws; and
 
-        3. provide to Merchant for review such copies of the Contracted Processors' agreements with Subprocessors (which may be redacted to remove confidential commercial information not relevant to the requirements of this Addendum) as Merchant may request from time to time.
+        3. provide to Merchant for review such copies of the Contracted Processors' agreements with Subprocessors (which may be redacted to remove confidential commercial information not relevant to the requirements of this Agreement) as Merchant may request from time to time.
 
-    6. Google and each Google Affiliate shall ensure that each Subprocessor performs the obligations under [clause 3](#processing), [clause 4](#personnel), [clause 5](#security), [clause 7.1](#data-subject-measures), [clause 8.2](#breach-cooperation), [clause 9.1](#deletion-obligation) and [clause 10.1](#audit-obligation), as they apply to Processing of Merchant Personal Data carried out by that Subprocessor, as if it were party to this Addendum in place of Google.
+    6. Google and each Google Affiliate shall ensure that each Subprocessor performs the obligations under [clause 3](#processing), [clause 4](#personnel), [clause 5](#security), [clause 7.1](#data-subject-measures), [clause 8.2](#breach-cooperation), [clause 9.1](#deletion-obligation) and [clause 10.1](#audit-obligation), as they apply to Processing of Merchant Personal Data carried out by that Subprocessor, as if it were party to this Agreement in place of Google.
 
 7. ## Data Subject Rights {#data-subject-rights}
 
@@ -254,15 +254,15 @@ schedule:
 
 12. ## GDPR Specific Provisions {#gdpr-provisions}
 
-    1. [Addendum 1](#addendum-details) to this Addendum sets out certain information regarding the Contracted Processors' Processing of the Merchant Personal Data as required by article 28(3) of the GDPR (and equivalent requirements of other Data Protection Laws). Nothing in [Addendum 1](#addendum-details) (including as amended pursuant to [this clause](#gdpr-provisions)) confers any right or imposes any obligation on any party to this Addendum.
+    1. [Addendum 1](#addendum-details) to this Agreement sets out certain information regarding the Contracted Processors' Processing of the Merchant Personal Data as required by article 28(3) of the GDPR (and equivalent requirements of other Data Protection Laws). Nothing in [Addendum 1](#addendum-details) (including as amended pursuant to [this clause](#gdpr-provisions)) confers any right or imposes any obligation on any party to this Agreement.
 
     2. Google and each Google Affiliate shall provide reasonable assistance to each Merchant Group Member with any data protection impact assessments, and prior consultations with Supervisory Authorities or other competent data privacy authorities, which Merchant reasonably considers to be required of any Merchant Group Member by article 35 or 36 of the GDPR or equivalent provisions of any other Data Protection Laws, in each case solely in relation to Processing of Merchant Personal Data by, and taking into account the nature of the Processing and information available to, the Contracted Processors.
 
-    3. To the extent that Google processes any personal data under this Addendum that originates from a GDPR Zone to a country that has not been designated by the Commission as providing an adequate level of protection for personal data, the parties agree to enter into the Standard Contractual Clauses, which are hereby incorporated into and form part of this Addendum. The parties hereby agree that:
+    3. To the extent that Google processes any personal data under this Agreement that originates from a GDPR Zone to a country that has not been designated by the Commission as providing an adequate level of protection for personal data, the parties agree to enter into the Standard Contractual Clauses, which are hereby incorporated into and form part of this Agreement. The parties hereby agree that:
 
-        1. Data processing details set out in [Addendum 1](#addendum-details) of this Addendum shall apply for the purposes of Appendix 1 of the Standard Contractual Clauses;
+        1. Data processing details set out in [Addendum 1](#addendum-details) of this Agreement shall apply for the purposes of Appendix 1 of the Standard Contractual Clauses;
 
-        2. The technical and organizational security measures set out in [Addendum 2](#addendum-safety) of this Addendum shall apply for the purpose of Appendix 2 to the Standard Contractual Clauses; and
+        2. The technical and organizational security measures set out in [Addendum 2](#addendum-safety) of this Agreement shall apply for the purpose of Appendix 2 to the Standard Contractual Clauses; and
 
         3. Google shall be deemed the "data importer" and the Merchant the "data exporter" under the Standard Contractual Clauses.
 
@@ -280,23 +280,23 @@ schedule:
 
     1. ### Governing Law and Jurisdiction {#governing-law}
 
-        1. The parties to this Addendum hereby submit to the choice of jurisdiction stipulated in the Principal Agreement with respect to any disputes or claims howsoever arising under this Addendum, including disputes regarding its existence, validity or termination or the consequences of its nullity; and
+        1. The parties to this Agreement hereby submit to the choice of jurisdiction stipulated in the Principal Agreement with respect to any disputes or claims howsoever arising under this Agreement, including disputes regarding its existence, validity or termination or the consequences of its nullity; and
 
-        2. This Addendum and all non-contractual or other obligations arising out of or in connection with it are governed by the laws of the country or territory stipulated for this purpose in the Principal Agreement.
+        2. This Agreement and all non-contractual or other obligations arising out of or in connection with it are governed by the laws of the country or territory stipulated for this purpose in the Principal Agreement.
 
     2. ### Order of Precedence {#precedence}
 
-        1. Nothing in this Addendum reduces Google's or any Google Affiliate's obligations under the Principal Agreement in relation to the protection of Personal Data or permits Google or any Google Affiliate to Process (or permit the Processing of) Personal Data in a manner which is prohibited by the Principal Agreement.
+        1. Nothing in this Agreement reduces Google's or any Google Affiliate's obligations under the Principal Agreement in relation to the protection of Personal Data or permits Google or any Google Affiliate to Process (or permit the Processing of) Personal Data in a manner which is prohibited by the Principal Agreement.
 
-        2. Subject to [clause 3](#processing), with regard to the subject matter of this Addendum, in the event of inconsistencies between the provisions of this Addendum and any other agreements between the parties, including the Principal Agreement and including (except where explicitly agreed otherwise in writing, signed on behalf of the parties) agreements entered into or purported to be entered into after the date of this Addendum, the provisions of this Addendum shall prevail.
+        2. Subject to [clause 3](#processing), with regard to the subject matter of this Agreement, in the event of inconsistencies between the provisions of this Agreement and any other agreements between the parties, including the Principal Agreement and including (except where explicitly agreed otherwise in writing, signed on behalf of the parties) agreements entered into or purported to be entered into after the date of this Agreement, the provisions of this Agreement shall prevail.
 
     3. ### Changes in Data Protection Laws {#changes}
 
-        1. Merchant may propose any other variations to this Addendum which Merchant reasonably considers to be necessary to address the requirements of any Data Protection Laws.
+        1. Merchant may propose any other variations to this Agreement which Merchant reasonably considers to be necessary to address the requirements of any Data Protection Laws.
 
     4. ### Severance {#severance}
 
-        1. Should any provision of this Addendum be invalid or unenforceable, then the remainder of this Addendum shall remain valid and in force. The invalid or unenforceable provision shall be either:
+        1. Should any provision of this Agreement be invalid or unenforceable, then the remainder of this Agreement shall remain valid and in force. The invalid or unenforceable provision shall be either:
 
             1. amended as necessary to ensure its validity and enforceability, while preserving the parties' intentions as closely as possible; or, if this is not possible,
 
@@ -310,7 +310,7 @@ This [Addendum 1](#addendum-details) includes certain details of the Processing 
 
     1. ### Data Exporter
 
-        1. **Name**: The entity identified as the Merchant on this Addendum.
+        1. **Name**: The entity identified as the Merchant on this Agreement.
 
         2. **Address**: The Merchant's Billing Address specified in the Merchant's account.
 
@@ -334,7 +334,7 @@ This [Addendum 1](#addendum-details) includes certain details of the Processing 
 
 # ADDENDUM 2 - Technical and Organisational Safety Measures {#addendum-safety}
 
-Google will maintain administrative, physical and technical safeguards designed to protect the security, confidentiality and integrity of the Merchant's personal data Processed by Google, as described in the Principal Agreement and this Addendum.
+Google will maintain administrative, physical and technical safeguards designed to protect the security, confidentiality and integrity of the Merchant's personal data Processed by Google, as described in the Principal Agreement and this Agreement.
 
 Google will not materially decrease the overall security of the Services during a subscription term.
 

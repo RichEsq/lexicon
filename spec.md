@@ -453,9 +453,9 @@ A processor may generate a definitions schedule or glossary by collecting all de
 
 Cross-references allow one clause to refer to another by a stable identifier, rather than by a hard-coded clause number. This means clause numbers can change (due to insertions, deletions, or reordering) without breaking references.
 
-### 5.2. Anchors
+### 5.2. Anchors (Tags / Reference Points)
 
-An anchor marks a location in the document that can be referenced from elsewhere.
+An anchor (also called a **tag** or **reference point**) marks a location in the document that can be referenced from elsewhere.
 
 #### 5.2.1. Heading-Level Anchors
 

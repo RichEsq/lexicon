@@ -593,6 +593,32 @@ Standard Markdown tables are used where a contract requires tabular data:
 
 A processor renders these as formatted tables in the output document.
 
+> **TODO**: Define the semantics of tables within the clause hierarchy. Open questions:
+> - Can tables appear at any nesting level within a clause?
+> - Should table cells support inline Lexicon features (defined terms, cross-references)?
+> - Are tables purely presentational, or can they carry structural meaning (e.g., a table of defined terms)?
+> - How should tables interact with clause numbering (do they interrupt the flow, or sit inline)?
+
+## 7A. Code Blocks
+
+> **TODO**: Determine whether code blocks (fenced with `` ``` `` or indented by 4 spaces) have a role in Lexicon documents. Potential use cases:
+> - Displaying formulae or algorithms in technical contracts
+> - Embedding machine-readable identifiers or code snippets in technology agreements
+> - Preserving whitespace-sensitive content (e.g., specific formatting requirements)
+>
+> Open questions:
+> - Should code blocks be supported as a first-class construct, or simply passed through as standard Markdown?
+> - How should a processor render code blocks in output formats (e.g., monospaced box in DOCX)?
+> - Is there any interaction with clause numbering or defined terms within code blocks?
+
+## 7B. Blockquotes (Extended)
+
+> **TODO**: Clarify the role of blockquotes beyond the current definition in section 3.5. Open questions:
+> - Section 3.5 defines blockquotes for formulae, examples, and quoted text. Should this be expanded?
+> - Should blockquotes support nested Lexicon features (defined terms, cross-references)?
+> - Are there distinct semantic types of blockquotes (formula vs. quotation vs. example) that a processor should distinguish?
+> - How should blockquotes render in different output formats (indented? boxed? italicised?)
+
 ## 8. Addenda and Exhibits
 
 Lexicon distinguishes between three types of attachments to a contract:

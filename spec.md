@@ -371,6 +371,20 @@ or:
 
 A processor identifies formal definitions by matching this pattern. The bold text is the canonical defined term.
 
+#### 4.2.1. Multi-Line Definitions
+
+A formal definition may span multiple sub-clauses. This occurs when the text following "means" ends with a continuation character (colon, semicolon, or comma) and the definition continues in child clauses:
+
+```markdown
+1. **Personal Data** means any data that:
+
+    1. identifies a natural person; or
+
+    2. can be used to identify a natural person.
+```
+
+A processor should treat the entire structure — the introductory text and its child clauses — as the complete definition. When presenting a definition summary (e.g., in a tooltip or glossary), the processor should include the text of continuation sub-clauses.
+
 ### 4.3. Inline Definitions
 
 A term can be defined contextually within a clause, typically using a parenthetical:
@@ -412,6 +426,14 @@ A processor should:
 1. collect all defined terms from bold text (formal definitions, inline definitions, and party roles);
 2. scan the document text for occurrences of each defined term; and
 3. warn if a defined term is never used in the document.
+
+#### 4.4.1. Case Sensitivity
+
+Defined term matching is case-sensitive. This allows terms to be reused in their ordinary sense when not capitalised. For example, if "Agreement" is a defined term, the word "agreement" in lowercase does not reference it.
+
+#### 4.4.2. Longest Match
+
+When one defined term is a prefix of another (e.g., "Merchant" and "Merchant Data"), a processor must match the longest applicable term first. The text "Merchant Data" should match the "Merchant Data" definition — "Merchant" must not consume the first word and leave "Data" unmatched.
 
 ### 4.5. Party Roles as Defined Terms
 

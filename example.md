@@ -1,9 +1,9 @@
 ---
 title: Data Processing Agreement
-type: Deed
+type: Agreement
 date: 2026-01-15
 ref: "OK:RP:20260115"
-author: Richard Prangell (Viridian Lawyers)
+author: Viridian Lawyers
 status: draft
 version: 1.4
 parties:
@@ -11,23 +11,38 @@ parties:
     specifier: ACN 001 002 987
     role: Google
     entity_type: au-company
-  - name: The Merchant
-    specifier: as defined in the Principal Agreement
+  - name: Tiny Company Pty Ltd
+    specifier: ACN 123 456 987
     role: Merchant
-    entity_type: au-individual
-exhibits: []
+    entity_type: au-company
+exhibits: 
+  - title: Site Plan
+    path: ./exhibits/site-plan.jpg
+  - title: Technical Drawings
+    path: ./exhibits/drawings.pdf
+  - title: Placeholder Only
 schedule:
   - title: Schedule
 ---
 # Background
 
-1. The parties have entered into a principal agreement for the provision of advertising services (the **Principal Agreement**).
+1. Autem cumque libero omnis est quo. Recusandae dolores ratione quis aut numquam minus dicta. Soluta provident occaecati laborum non natus. Consequatur reiciendis tenetur error.  
 
-2. The **Merchant** wishes to engage **Google** to process certain personal data on its behalf in connection with the **Principal Agreement**.
+2. Cum similique ut tempora dolore sit necessitatibus minus. 
 
-3. The parties wish to record the terms on which **Google** will process personal data on behalf of the **Merchant**.
+3. Odio sit voluptates animi illum. 
+    
+    1. Maiores soluta occaecati ab rerum. Soluta itaque quia laudantium magnam eum aut est dolore. Adipisci nisi minus consequatur iste et voluptas ipsa voluptas. Veritatis corrupti id voluptatum et et totam. Illo consequatur facilis et dicta eos aut error quam. 
+        
+        1. Impedit mollitia non quis qui consequatur. 
+        
+            1. Dolores est eos consequatur necessitatibus itaque laboriosam.  
+    
+    2. Adipisci nisi minus consequatur iste et voluptas ipsa voluptas.
 
-# Operative Provisions
+3. Rem ut optio mollitia enim ad. Beatae exercitationem autem ea omnis. Et voluptatem rerum asperiores et velit soluta voluptatem.  
+
+# Agreement
 
 1. ## Definitions {#definitions}
 
@@ -60,6 +75,8 @@ schedule:
             4. any data protection or privacy laws of:
 
                 1. The Commonwealth of Australia, or any state therein;
+                    
+                    2. This is a level 6 test.
 
                 2. Canada, or any province therein; and
 
@@ -128,6 +145,8 @@ schedule:
         1. comply with all applicable Applicable Laws in the Processing of Merchant Personal Data; and
 
         2. not Process Merchant Personal Data other than on the relevant Merchant Group Member's documented instructions unless Processing is required by Applicable Laws to which the relevant Contracted Processor is subject, in which case Google or the relevant Google Affiliate shall to the extent permitted by Applicable Laws inform the relevant Merchant Group Member of that legal requirement before the relevant Processing of that Personal Data. {#processing-instructions}
+    
+    unless its a Tuesday, in which case they can do nothing.
 
     3. Each Merchant Group Member:
 
@@ -235,15 +254,15 @@ schedule:
 
 12. ## GDPR Specific Provisions {#gdpr-provisions}
 
-    1. ADDENDUM 1 to this Addendum sets out certain information regarding the Contracted Processors' Processing of the Merchant Personal Data as required by article 28(3) of the GDPR (and equivalent requirements of other Data Protection Laws). Nothing in ADDENDUM 1 (including as amended pursuant to [this clause](#gdpr-provisions)) confers any right or imposes any obligation on any party to this Addendum.
+    1. [Addendum 1](#addendum-details) to this Addendum sets out certain information regarding the Contracted Processors' Processing of the Merchant Personal Data as required by article 28(3) of the GDPR (and equivalent requirements of other Data Protection Laws). Nothing in [Addendum 1](#addendum-details) (including as amended pursuant to [this clause](#gdpr-provisions)) confers any right or imposes any obligation on any party to this Addendum.
 
     2. Google and each Google Affiliate shall provide reasonable assistance to each Merchant Group Member with any data protection impact assessments, and prior consultations with Supervisory Authorities or other competent data privacy authorities, which Merchant reasonably considers to be required of any Merchant Group Member by article 35 or 36 of the GDPR or equivalent provisions of any other Data Protection Laws, in each case solely in relation to Processing of Merchant Personal Data by, and taking into account the nature of the Processing and information available to, the Contracted Processors.
 
     3. To the extent that Google processes any personal data under this Addendum that originates from a GDPR Zone to a country that has not been designated by the Commission as providing an adequate level of protection for personal data, the parties agree to enter into the Standard Contractual Clauses, which are hereby incorporated into and form part of this Addendum. The parties hereby agree that:
 
-        1. Data processing details set out in ADDENDUM 1 of this Addendum shall apply for the purposes of Appendix 1 of the Standard Contractual Clauses;
+        1. Data processing details set out in [Addendum 1](#addendum-details) of this Addendum shall apply for the purposes of Appendix 1 of the Standard Contractual Clauses;
 
-        2. The technical and organizational security measures set out in ADDENDUM 2 of this Addendum shall apply for the purpose of Appendix 2 to the Standard Contractual Clauses; and
+        2. The technical and organizational security measures set out in [Addendum 2](#addendum-safety) of this Addendum shall apply for the purpose of Appendix 2 to the Standard Contractual Clauses; and
 
         3. Google shall be deemed the "data importer" and the Merchant the "data exporter" under the Standard Contractual Clauses.
 
@@ -283,9 +302,9 @@ schedule:
 
             2. construed in a manner as if the invalid or unenforceable part had never been contained therein.
 
-# ADDENDUM 1 - Details of Processing of Merchant Personal Data
+# ADDENDUM 1 - Details of Processing of Merchant Personal Data {#addendum-details}
 
-This ADDENDUM 1 includes certain details of the Processing of Merchant Personal Data as required by Article 28(3) GDPR.
+This [Addendum 1](#addendum-details) includes certain details of the Processing of Merchant Personal Data as required by Article 28(3) GDPR.
 
 1. ## LIST OF PARTIES
 
@@ -305,21 +324,21 @@ This ADDENDUM 1 includes certain details of the Processing of Merchant Personal 
 
         1. **Name**: Google.
 
-        2. **Address**: Google Pty Ltd, 50 Holt Street, Surry Hills, NSW Australia.
+        2. **Address**: Google Pty Ltd, Suite 4.07, Level 4, 50 Holt Street, Surry Hills, NSW Australia.
 
-        3. **Contact person's name, position and contact details**: John Smith, Data Protection Officer, john.smith@google.com.
+        3. **Contact person's name, position and contact details**: Richard Prangell, Data Protection Officer, richard.prangell@Google.io.
 
         4. **Activities relevant to the data transferred under these Clauses**: The data importer operates an ecommerce marketing platform and service.
 
         5. **Role (controller/processor)**: Processor
 
-# ADDENDUM 2 - Technical and Organisational Safety Measures
+# ADDENDUM 2 - Technical and Organisational Safety Measures {#addendum-safety}
 
 Google will maintain administrative, physical and technical safeguards designed to protect the security, confidentiality and integrity of the Merchant's personal data Processed by Google, as described in the Principal Agreement and this Addendum.
 
 Google will not materially decrease the overall security of the Services during a subscription term.
 
-# ADDENDUM 3 - Standard Contractual Clauses - Supplementary Terms To Provide Additional Safeguards
+# ADDENDUM 3 - Standard Contractual Clauses - Supplementary Terms To Provide Additional Safeguards {#addendum-scc}
 
 This ADDENDUM is supplemental to, and should be read in conjunction with, the Standard Contractual Clauses. Any references to the 'Clauses' in this ADDENDUM should be read as references to the Standard Contractual Clauses.
 
@@ -331,7 +350,7 @@ The data importer agrees and warrants:
 
 3. that, in the event the data transfer and data processing activities are suspended or terminated pursuant to the Clauses or this ADDENDUM, its cessation of the data processing activities will not be prevented by, or be in breach of, and will not give rise to any third party rights or remedies pursuant to, any binding obligation on the data importer under the Clauses or any other agreement between the data importer and the data exporter (or any of its affiliates) in relation to the personal data and data processing activities.
 
-# ADDENDUM 4 - List of Sub-processors
+# ADDENDUM 4 - List of Sub-processors {#addendum-subprocessors}
 
 The Merchant has authorised the use of the Subprocessors set out at:
-<https://www.google.com/gdpr/>
+<https://www.Google.io/gdpr/>

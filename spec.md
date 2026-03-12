@@ -128,7 +128,7 @@ A list of parties to the contract. Each party has the following sub-fields:
 | `name`        | Yes      | The legal name of the party.                                       |
 | `specifier`   | No       | Identifying detail (address, ACN, ABN, registration number, etc.). |
 | `role`        | Yes      | The drafting reference used throughout the contract (e.g., "Employer", "Contractor"). |
-| `entity_type` | No       | A compound `{jurisdiction}-{type}` string identifying the kind of legal entity (e.g., `au-company`, `uk-individual`). Used by a processor to select the appropriate signature block template. |
+| `entity_type` | No       | A compound `{jurisdiction}-{type}` string identifying the kind of legal entity (e.g., `au-company`, `uk-individual`). The jurisdiction component must be a lowercase ISO 3166-1 alpha-2 country code. Used by a processor to apply jurisdiction- and entity-specific conventions (e.g., signature block format, execution clauses). |
 
 ```yaml
 parties:
@@ -141,6 +141,8 @@ parties:
     role: Employer
     entity_type: au-company
 ```
+
+For example, a processor might use `entity_type` to interpret the `specifier` field according to local convention: Australian companies are typically identified by their ACN, whereas US companies are identified by their state of incorporation or principal place of business.
 
 Party roles are automatically treated as defined terms. A processor should include them in any generated glossary and may validate that the role appears in the contract body.
 
@@ -436,6 +438,24 @@ Defined term matching is case-sensitive. This allows terms to be reused in their
 #### 4.4.2. Longest Match
 
 When one defined term is a prefix of another (e.g., "Merchant" and "Merchant Data"), a processor must match the longest applicable term first. The text "Merchant Data" should match the "Merchant Data" definition — "Merchant" must not consume the first word and leave "Data" unmatched.
+
+#### 4.4.3. Plural Forms
+
+A processor should recognise common English plural forms of defined terms as references to those terms. For example, if "Agreement" is a defined term, the word "Agreements" in the document text should be treated as a reference to the same term.
+
+Plural matching applies standard English pluralisation rules to the last word of each defined term:
+
+| Singular ending | Plural form | Example |
+|----------------|-------------|---------|
+| *(default)* | +s | Agreement → Agreements |
+| -s, -x, -z, -sh, -ch | +es | Business → Businesses |
+| consonant + y | -ies | Party → Parties |
+
+Multi-word terms pluralise the last word only: "Receiving Party" → "Receiving Parties", "Business Day" → "Business Days".
+
+Plural matching is case-sensitive, following the same rule as singular matching (see 4.4.1). The plural form "Agreements" matches the defined term "Agreement", but "agreements" does not.
+
+This behaviour is optional. A processor that does not implement plural matching should still accept documents that use plural forms — they will simply not be highlighted or validated as term references.
 
 ### 4.5. Party Roles as Defined Terms
 

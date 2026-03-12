@@ -655,14 +655,6 @@ A processor renders these as formatted tables in the output document.
 > - How should a processor render code blocks in output formats (e.g., monospaced box in DOCX)?
 > - Is there any interaction with clause numbering or defined terms within code blocks?
 
-## 7B. Blockquotes (Extended)
-
-> **TODO**: Clarify the role of blockquotes beyond the current definition in section 3.5. Open questions:
-> - Section 3.5 defines blockquotes for formulae, examples, and quoted text. Should this be expanded?
-> - Should blockquotes support nested Lexicon features (defined terms, cross-references)?
-> - Are there distinct semantic types of blockquotes (formula vs. quotation vs. example) that a processor should distinguish?
-> - How should blockquotes render in different output formats (indented? boxed? italicised?)
-
 ## 8. Addenda and Exhibits
 
 Lexicon distinguishes between three types of attachments to a contract:

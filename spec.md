@@ -242,6 +242,8 @@ The hierarchy is:
 
 Without a processor, standard Markdown renderers will display these as nested numbered lists (`1.`, `1.`, `1.`, `1.`). With a processor (e.g., Pandoc with a custom filter, or a dedicated tool), the numbering is transformed to the legal convention shown in the table above.
 
+> **Important:** Blank lines are required between list items. This is standard CommonMark "loose list" syntax and is necessary for nested clauses to be parsed correctly. Without blank lines, a nested item may be treated as inline text within its parent rather than as a separate clause.
+
 ### 3.4. Multiple Paragraphs Within a Clause
 
 A clause may contain multiple paragraphs. Subsequent paragraphs are indented to the same level as their parent clause and separated by a blank line:

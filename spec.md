@@ -285,7 +285,9 @@ Blockquotes are used for material that does not form a structural part of the cl
     1. The Lessee will pay a termination fee calculated as follows:
 
         > (2 × A) − C
+        >
         > Where "A" has the value of 1 month's rent
+        >
         > Where "C" has the value of the Rental Bond
 ```
 

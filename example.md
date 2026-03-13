@@ -7,9 +7,9 @@ author: Viridian Lawyers
 status: draft
 version: 1.4
 parties:
-  - name: Google Pty Ltd
+  - name: Supplier Pty Ltd
     specifier: ACN 001 002 987
-    role: Google
+    role: Supplier
     entity_type: au-company
   - name: Tiny Company Pty Ltd
     specifier: ACN 123 456 987
@@ -17,30 +17,29 @@ parties:
     entity_type: au-company
 exhibits: 
   - title: Site Plan
-    path: ./exhibits/site-plan.jpg
+    path: https://upload.wikimedia.org/wikipedia/commons/5/5c/Pair_of_white_domesticated_ducks.jpg
   - title: Technical Drawings
     path: ./exhibits/drawings.pdf
   - title: Placeholder Only
 schedule:
   - title: Schedule
 ---
+
 # Background
 
-1. Autem cumque libero omnis est quo. Recusandae dolores ratione quis aut numquam minus dicta. Soluta provident occaecati laborum non natus. Consequatur reiciendis tenetur error.  
+1. The Merchant and Supplier are parties to an agreement for the provision of Services (the Principal Agreement).
 
-2. Cum similique ut tempora dolore sit necessitatibus minus. 
+2. In the course of performing its obligations under the Principal Agreement, Supplier will Process Merchant Personal Data on behalf of the Merchant as a Processor.
 
-3. Odio sit voluptates animi illum. 
-    
-    1. Maiores soluta occaecati ab rerum. Soluta itaque quia laudantium magnam eum aut est dolore. Adipisci nisi minus consequatur iste et voluptas ipsa voluptas. Veritatis corrupti id voluptatum et et totam. Illo consequatur facilis et dicta eos aut error quam. 
-        
-        1. Impedit mollitia non quis qui consequatur. 
-        
-            1. Dolores est eos consequatur necessitatibus itaque laboriosam.  
-    
-    2. Adipisci nisi minus consequatur iste et voluptas ipsa voluptas.
+3. The parties have agreed to enter into this Agreement in order to:
 
-3. Rem ut optio mollitia enim ad. Beatae exercitationem autem ea omnis. Et voluptatem rerum asperiores et velit soluta voluptatem.  
+    1. ensure that the Processing of Merchant Personal Data by Supplier and its Subprocessors is carried out in compliance with all Applicable Laws, including the GDPR, UK Data Protection Laws, US Data Protection Laws, and the data protection and privacy laws of Australia, Canada, and New Zealand;
+
+    2. set out the parties' respective rights and obligations in relation to the Processing of Merchant Personal Data; and
+
+    3. satisfy the requirements of Article 28(3) of the GDPR and equivalent provisions under other applicable Data Protection Laws for a written agreement between a Controller and a Processor.
+
+4. This Agreement is supplemental to, and forms part of, the Principal Agreement. In the event of any conflict between this Agreement and the Principal Agreement in relation to the Processing of Merchant Personal Data, this Agreement shall prevail.
 
 # Agreement
 
@@ -60,9 +59,9 @@ schedule:
 
         2. **CCPA** means the California Consumer Privacy Act of 2018, AB 375 as amended, including by the California Privacy Rights Act, and its accompanying regulations.
 
-        3. **Contracted Processor** means Google or a Subprocessor.
+        3. **Contracted Processor** means Supplier or a Subprocessor.
 
-        4. **Data Subject** means an Identifiable Natural Person about whom the Merchant or Google holds Personal Data and who is subject to the Data Protection Laws.
+        4. **Data Subject** means an Identifiable Natural Person about whom the Merchant or Supplier holds Personal Data and who is subject to the Data Protection Laws.
 
         5. **Data Protection Laws** means to the extent applicable:
 
@@ -100,7 +99,7 @@ schedule:
 
         12. **Merchant Personal Data** means any Personal Data Processed by a Contracted Processor on behalf of a Merchant Group Member pursuant to or in connection with the Principal Agreement.
 
-        13. **Google Affiliate** means an entity that owns or controls, is owned or controlled by or is or under common control or ownership with Google, where control is defined as the possession, directly or indirectly, of the power to direct or cause the direction of the management and policies of an entity, whether through ownership of voting securities, by contract or otherwise.
+        13. **Supplier Affiliate** means an entity that owns or controls, is owned or controlled by or is or under common control or ownership with Supplier, where control is defined as the possession, directly or indirectly, of the power to direct or cause the direction of the management and policies of an entity, whether through ownership of voting securities, by contract or otherwise.
 
         14. **Processing** means any operation or set of operations which is performed on personal data or on sets of personal data, whether or not by automated means, such as collection, recording, organisation, structuring, storage, adaptation or alteration, retrieval, consultation, use, disclosure by transmission, dissemination or otherwise making available, alignment or combination, restriction, erasure or destruction.
 
@@ -110,7 +109,7 @@ schedule:
 
         17. **Personal Data Breach** means a breach of security leading to the accidental or unlawful destruction, loss, alteration, unauthorised disclosure of, or access to, personal data transmitted, stored or otherwise processed.
 
-        18. **Services** means the services and other activities to be supplied to or carried out by or on behalf of Google for Merchant Group Members pursuant to the Principal Agreement.
+        18. **Services** means the services and other activities to be supplied to or carried out by or on behalf of Supplier for Merchant Group Members pursuant to the Principal Agreement.
 
         19. **Standard Contractual Clauses** means:
 
@@ -118,7 +117,7 @@ schedule:
 
             2. includes, where any Merchant Group Member is subject to the laws of the United Kingdom of Great Britain and Northern Ireland, the International Data Transfer Addendum issued by the United Kingdom Information Commissioner under section 119(A)(1) of the Data Protection Act 2018.
 
-        20. **Subprocessor** means any person (including any third party and any Google Affiliate, but excluding an employee of Google or any of its sub-contractors) appointed by or on behalf of Google or any Google Affiliate to Process Personal Data on behalf of any Merchant Group Member in connection with the Principal Agreement.
+        20. **Subprocessor** means any person (including any third party and any Supplier Affiliate, but excluding an employee of Supplier or any of its sub-contractors) appointed by or on behalf of Supplier or any Supplier Affiliate to Process Personal Data on behalf of any Merchant Group Member in connection with the Principal Agreement.
 
         21. **UK Data Protection Laws** means the UK Data Protection Act 2018, the Digital Markets, Competition and Consumers Act 2024 (UK) and the UK-GDPR.
 
@@ -134,23 +133,23 @@ schedule:
 
 2. ## Authority {#authority}
 
-    1. Google warrants and represents that, before any Google Affiliate Processes any Merchant Personal Data on behalf of any Merchant Group Member, Google's entry into this Agreement as agent for and on behalf of that Google Affiliate will have been duly and effectively authorised (or subsequently ratified) by that Google Affiliate.
+    1. Supplier warrants and represents that, before any Supplier Affiliate Processes any Merchant Personal Data on behalf of any Merchant Group Member, Supplier's entry into this Agreement as agent for and on behalf of that Supplier Affiliate will have been duly and effectively authorised (or subsequently ratified) by that Supplier Affiliate.
 
 3. ## Processing of Merchant Personal Data {#processing}
 
-    1. Google is a Processor of Personal Data on behalf of the Merchant.
+    1. Supplier is a Processor of Personal Data on behalf of the Merchant.
 
-    2. Google and each Google Affiliate shall:
+    2. Supplier and each Supplier Affiliate shall:
 
         1. comply with all applicable Applicable Laws in the Processing of Merchant Personal Data; and
 
-        2. not Process Merchant Personal Data other than on the relevant Merchant Group Member's documented instructions unless Processing is required by Applicable Laws to which the relevant Contracted Processor is subject, in which case Google or the relevant Google Affiliate shall to the extent permitted by Applicable Laws inform the relevant Merchant Group Member of that legal requirement before the relevant Processing of that Personal Data. {#processing-instructions}
+        2. not Process Merchant Personal Data other than on the relevant Merchant Group Member's documented instructions unless Processing is required by Applicable Laws to which the relevant Contracted Processor is subject, in which case Supplier or the relevant Supplier Affiliate shall to the extent permitted by Applicable Laws inform the relevant Merchant Group Member of that legal requirement before the relevant Processing of that Personal Data. {#processing-instructions}
     
     unless its a Tuesday, in which case they can do nothing.
 
     3. Each Merchant Group Member:
 
-        1. instructs Google and each Google Affiliate (and authorises Google and each Google Affiliate to instruct each Subprocessor) to:
+        1. instructs Supplier and each Supplier Affiliate (and authorises Supplier and each Supplier Affiliate to instruct each Subprocessor) to:
 
             1. Process Merchant Personal Data; and
 
@@ -160,13 +159,13 @@ schedule:
 
         2. warrants and represents that it is and will at all relevant times remain duly and effectively authorised to give the instruction set out in [clause 3](#processing) on behalf of each relevant Merchant Affiliate.
 
-4. ## Google and Google Affiliate Personnel {#personnel}
+4. ## Supplier and Supplier Affiliate Personnel {#personnel}
 
-    1. Google and each Google Affiliate shall take reasonable steps to ensure that with respect to any Merchant Personal Data, access is strictly limited to those employees, agents or contractors of Google, or any Contracted Processor, who need to know or access the relevant Merchant Personal Data, as strictly necessary for the purposes of the Principal Agreement, and to comply with Applicable Laws in the context of that individual's duties to the Contracted Processor, ensuring that all such individuals are subject to confidentiality undertakings or professional or statutory obligations of confidentiality.
+    1. Supplier and each Supplier Affiliate shall take reasonable steps to ensure that with respect to any Merchant Personal Data, access is strictly limited to those employees, agents or contractors of Supplier, or any Contracted Processor, who need to know or access the relevant Merchant Personal Data, as strictly necessary for the purposes of the Principal Agreement, and to comply with Applicable Laws in the context of that individual's duties to the Contracted Processor, ensuring that all such individuals are subject to confidentiality undertakings or professional or statutory obligations of confidentiality.
 
 5. ## Security {#security}
 
-    1. Taking into account the state of the art, the costs of implementation and the nature, scope, context and purposes of Processing as well as the risk of varying likelihood and severity for the rights and freedoms of natural persons, Google and each Google Affiliate shall in relation to the Merchant Personal Data implement appropriate technical and organizational measures to ensure a level of security appropriate to that risk, including, as appropriate:
+    1. Taking into account the state of the art, the costs of implementation and the nature, scope, context and purposes of Processing as well as the risk of varying likelihood and severity for the rights and freedoms of natural persons, Supplier and each Supplier Affiliate shall in relation to the Merchant Personal Data implement appropriate technical and organizational measures to ensure a level of security appropriate to that risk, including, as appropriate:
 
         1. the pseudonymisation and encryption of personal data;
 
@@ -176,47 +175,47 @@ schedule:
 
         4. a process for regularly testing, assessing and evaluating the effectiveness of technical and organisational measures for ensuring the security of the processing.
 
-    2. In assessing the appropriate level of security, Google and each Google Affiliate shall take account of the risks that are presented by Processing, in particular from a Personal Data Breach.
+    2. In assessing the appropriate level of security, Supplier and each Supplier Affiliate shall take account of the risks that are presented by Processing, in particular from a Personal Data Breach.
 
 6. ## Subprocessing {#subprocessing}
 
-    1. Each Merchant Group Member authorises Google and each Google Affiliate to appoint (and permit each Subprocessor appointed in accordance with [this clause](#subprocessing) to appoint) Subprocessors in accordance with [this clause](#subprocessing) and any restrictions in the Principal Agreement.
+    1. Each Merchant Group Member authorises Supplier and each Supplier Affiliate to appoint (and permit each Subprocessor appointed in accordance with [this clause](#subprocessing) to appoint) Subprocessors in accordance with [this clause](#subprocessing) and any restrictions in the Principal Agreement.
 
-    2. Google and each Google Affiliate may continue to use those Subprocessors already engaged by Google or any Google Affiliate as at the date of this Agreement, subject to Google and each Google Affiliate in each case as soon as practicable meeting the obligations set out in [clause 3.2](#processing-instructions). {#subprocessing-existing}
+    2. Supplier and each Supplier Affiliate may continue to use those Subprocessors already engaged by Supplier or any Supplier Affiliate as at the date of this Agreement, subject to Supplier and each Supplier Affiliate in each case as soon as practicable meeting the obligations set out in [clause 3.2](#processing-instructions). {#subprocessing-existing}
 
-    3. Google shall give Merchant prior written notice of the appointment of any new Subprocessor, including full details of the Processing to be undertaken by the Subprocessor. If, within the Objection Period of receipt of that notice, Merchant notifies Google in writing of any objections (on reasonable grounds) to the proposed appointment. {#subprocessor-notice}
+    3. Supplier shall give Merchant prior written notice of the appointment of any new Subprocessor, including full details of the Processing to be undertaken by the Subprocessor. If, within the Objection Period of receipt of that notice, Merchant notifies Supplier in writing of any objections (on reasonable grounds) to the proposed appointment. {#subprocessor-notice}
 
-    4. Neither Google nor any Google Affiliate shall appoint (or disclose any Merchant Personal Data to) that proposed Subprocessor until reasonable steps have been taken to address the objections raised by any Merchant Group Member and Merchant has been provided with a reasonable written explanation of the steps taken.
+    4. Neither Supplier nor any Supplier Affiliate shall appoint (or disclose any Merchant Personal Data to) that proposed Subprocessor until reasonable steps have been taken to address the objections raised by any Merchant Group Member and Merchant has been provided with a reasonable written explanation of the steps taken.
 
-    5. With respect to each Subprocessor, Google or the relevant Google Affiliate shall:
+    5. With respect to each Subprocessor, Supplier or the relevant Supplier Affiliate shall:
 
         1. before the Subprocessor first Processes Merchant Personal Data (or, where relevant, in accordance with [clause 2](#authority)), carry out adequate due diligence to ensure that the Subprocessor is capable of providing the level of protection for Merchant Personal Data required by the Principal Agreement;
 
-        2. ensure that the arrangement between on the one hand Google, or the relevant Google Affiliate, or the relevant intermediate Subprocessor; and on the other hand the Subprocessor, is governed by a written contract including terms which offer at least the same level of protection for Merchant Personal Data as those set out in this Agreement and meet the requirements of the Applicable Laws; and
+        2. ensure that the arrangement between on the one hand Supplier, or the relevant Supplier Affiliate, or the relevant intermediate Subprocessor; and on the other hand the Subprocessor, is governed by a written contract including terms which offer at least the same level of protection for Merchant Personal Data as those set out in this Agreement and meet the requirements of the Applicable Laws; and
 
         3. provide to Merchant for review such copies of the Contracted Processors' agreements with Subprocessors (which may be redacted to remove confidential commercial information not relevant to the requirements of this Agreement) as Merchant may request from time to time.
 
-    6. Google and each Google Affiliate shall ensure that each Subprocessor performs the obligations under [clause 3](#processing), [clause 4](#personnel), [clause 5](#security), [clause 7.1](#data-subject-measures), [clause 8.2](#breach-cooperation), [clause 9.1](#deletion-obligation) and [clause 10.1](#audit-obligation), as they apply to Processing of Merchant Personal Data carried out by that Subprocessor, as if it were party to this Agreement in place of Google.
+    6. Supplier and each Supplier Affiliate shall ensure that each Subprocessor performs the obligations under [clause 3](#processing), [clause 4](#personnel), [clause 5](#security), [clause 7.1](#data-subject-measures), [clause 8.2](#breach-cooperation), [clause 9.1](#deletion-obligation) and [clause 10.1](#audit-obligation), as they apply to Processing of Merchant Personal Data carried out by that Subprocessor, as if it were party to this Agreement in place of Supplier.
 
 7. ## Data Subject Rights {#data-subject-rights}
 
-    1. Google and each Google Affiliate will make available technical and organisational measures for the fulfilment of the Merchant Group Members' obligations to respond to requests to exercise any Data Subject rights under the Applicable Laws. {#data-subject-measures}
+    1. Supplier and each Supplier Affiliate will make available technical and organisational measures for the fulfilment of the Merchant Group Members' obligations to respond to requests to exercise any Data Subject rights under the Applicable Laws. {#data-subject-measures}
 
-    2. The Merchant authorises Google, each Google Affiliate, and each Contracted Processor to comply with any request from a Data Subject under any Data Protection Laws in respect of Merchant Personal Data.
+    2. The Merchant authorises Supplier, each Supplier Affiliate, and each Contracted Processor to comply with any request from a Data Subject under any Data Protection Laws in respect of Merchant Personal Data.
 
-    3. Google shall notify the Merchant if Google, any Google Affiliate, or any Contracted Processor receives a request from a Data Subject under any Data Protection Laws in respect of Merchant Personal Data.
+    3. Supplier shall notify the Merchant if Supplier, any Supplier Affiliate, or any Contracted Processor receives a request from a Data Subject under any Data Protection Laws in respect of Merchant Personal Data.
 
 8. ## Personal Data Breach {#data-breach}
 
-    1. Google shall notify Merchant without undue delay upon Google or any Subprocessor becoming aware of a Personal Data Breach affecting Merchant Personal Data, providing Merchant with sufficient information to allow each Merchant Group Member to meet any obligations to report or inform Data Subjects of the Personal Data Breach under the Applicable Laws.
+    1. Supplier shall notify Merchant without undue delay upon Supplier or any Subprocessor becoming aware of a Personal Data Breach affecting Merchant Personal Data, providing Merchant with sufficient information to allow each Merchant Group Member to meet any obligations to report or inform Data Subjects of the Personal Data Breach under the Applicable Laws.
 
-    2. Google shall co-operate with Merchant and each Merchant Group Member and take such reasonable commercial steps as are directed by Merchant to assist in the investigation, mitigation and remediation of each such Personal Data Breach. {#breach-cooperation}
+    2. Supplier shall co-operate with Merchant and each Merchant Group Member and take such reasonable commercial steps as are directed by Merchant to assist in the investigation, mitigation and remediation of each such Personal Data Breach. {#breach-cooperation}
 
-    3. Google shall maintain a register of all Personal Data Breaches and provide reasonable access to such records as is necessary for the Merchant to comply with any Applicable Laws.
+    3. Supplier shall maintain a register of all Personal Data Breaches and provide reasonable access to such records as is necessary for the Merchant to comply with any Applicable Laws.
 
 9. ## Deletion or Return of Merchant Personal Data {#deletion}
 
-    1. Subject to [clause 9.2](#deletion-merchant-option) and [clause 9.3](#deletion-retention), Google and each Google Affiliate shall: {#deletion-obligation}
+    1. Subject to [clause 9.2](#deletion-merchant-option) and [clause 9.3](#deletion-retention), Supplier and each Supplier Affiliate shall: {#deletion-obligation}
 
         1. in the case of any live or operational data, promptly and in any event within 90 days; and
 
@@ -224,57 +223,68 @@ schedule:
 
         of the date of cessation of any Services involving the Processing of Merchant Personal Data (the **Cessation Date**), delete and procure the deletion of all copies of those Merchant Personal Data.
 
-    2. Subject to [clause 9.3](#deletion-retention), Merchant may in its absolute discretion by written notice to Google within 14 days of the Cessation Date require Google and each Google Affiliate to return a complete copy of all Merchant Personal Data to Merchant by secure file transfer in such format as is reasonably notified by Merchant to Google, or delete and procure the deletion of all other copies of Merchant Personal Data Processed by any Contracted Processor. Google and each Google Affiliate shall comply with any such written request within 90 days of the Cessation Date. {#deletion-merchant-option}
+    2. Subject to [clause 9.3](#deletion-retention), Merchant may in its absolute discretion by written notice to Supplier within 14 days of the Cessation Date require Supplier and each Supplier Affiliate to return a complete copy of all Merchant Personal Data to Merchant by secure file transfer in such format as is reasonably notified by Merchant to Supplier, or delete and procure the deletion of all other copies of Merchant Personal Data Processed by any Contracted Processor. Supplier and each Supplier Affiliate shall comply with any such written request within 90 days of the Cessation Date. {#deletion-merchant-option}
 
-    3. Each Contracted Processor may retain Merchant Personal Data to the extent required by Applicable Laws and only to the extent and for such period as required by Applicable Laws and always provided that Google and each Google Affiliate shall ensure the confidentiality of all such Merchant Personal Data and shall ensure that such Merchant Personal Data is only Processed as necessary for the purpose(s) specified in the Applicable Laws requiring its storage and for no other purpose. {#deletion-retention}
+    3. Where the Cessation Date occurs prior to the expiry of a prepaid term under the Principal Agreement, Supplier shall refund to the Merchant a pro-rata amount of any prepaid fees, calculated as follows:
 
-    4. Google shall provide written certification to Merchant that it and each Google Affiliate has fully complied with [this clause](#deletion) within 90 days of the Cessation Date.
+        > R = (F / T) x D
+        > 
+        > Where "R" is the refund amount
+        > 
+        > Where "F" is the total prepaid fees for the relevant term
+        > 
+        > Where "T" is the total number of days in the relevant term
+        > 
+        > Where "D" is the number of remaining days from the Cessation Date to the end of the relevant term
 
+    4. Each Contracted Processor may retain Merchant Personal Data to the extent required by Applicable Laws and only to the extent and for such period as required by Applicable Laws and always provided that Supplier and each Supplier Affiliate shall ensure the confidentiality of all such Merchant Personal Data and shall ensure that such Merchant Personal Data is only Processed as necessary for the purpose(s) specified in the Applicable Laws requiring its storage and for no other purpose. {#deletion-retention}
+
+    5. Supplier shall provide written certification to Merchant that it and each Supplier Affiliate has fully complied with [this clause](#deletion) within 90 days of the Cessation Date.
 10. ## Audit Rights {#audit}
 
-    1. Subject to [clause 10.2](#audit-conditions), Google and each Google Affiliate shall: {#audit-obligation}
+    1. Subject to [clause 10.2](#audit-conditions), Supplier and each Supplier Affiliate shall: {#audit-obligation}
 
         1. make reasonably available to each Merchant Group Member on request all information which must be made available under applicable Data Protection Laws; and
 
-        2. allow for and contribute to audits, including inspections of any Google premises, by any Merchant Group Member or an auditor mandated by any Merchant Group Member required under any Data Protection Laws;
+        2. allow for and contribute to audits, including inspections of any Supplier premises, by any Merchant Group Member or an auditor mandated by any Merchant Group Member required under any Data Protection Laws;
 
         in relation to the Processing of the Merchant Personal Data by the Contracted Processors.
 
-    2. The Merchant or the relevant Merchant Affiliate undertaking an audit shall give Google or the relevant Google Affiliate reasonable notice of any audit or inspection to be conducted under [clause 10.1](#audit-obligation) and shall make (and ensure that each of its mandated auditors makes) reasonable endeavours to avoid causing (or, if it cannot avoid, to minimise) any damage, injury or disruption to the Contracted Processors' premises, equipment, personnel and business while its personnel are on those premises in the course of such an audit or inspection. A Contracted Processor need not give access to its premises for the purposes of such an audit or inspection: {#audit-conditions}
+    2. The Merchant or the relevant Merchant Affiliate undertaking an audit shall give Supplier or the relevant Supplier Affiliate reasonable notice of any audit or inspection to be conducted under [clause 10.1](#audit-obligation) and shall make (and ensure that each of its mandated auditors makes) reasonable endeavours to avoid causing (or, if it cannot avoid, to minimise) any damage, injury or disruption to the Contracted Processors' premises, equipment, personnel and business while its personnel are on those premises in the course of such an audit or inspection. A Contracted Processor need not give access to its premises for the purposes of such an audit or inspection: {#audit-conditions}
 
         1. to any individual unless he or she produces reasonable evidence of identity and authority;
 
-        2. outside normal business hours at those premises, unless the audit or inspection needs to be conducted on an emergency basis and Merchant or the relevant Merchant Affiliate undertaking an audit has given notice to Google or the relevant Google Affiliate that this is the case before attendance outside those hours begins; or
+        2. outside normal business hours at those premises, unless the audit or inspection needs to be conducted on an emergency basis and Merchant or the relevant Merchant Affiliate undertaking an audit has given notice to Supplier or the relevant Supplier Affiliate that this is the case before attendance outside those hours begins; or
 
-        3. for the purposes of more than one audit or inspection, in respect of each Contracted Processor, in any calendar year, except for any audits or inspections which a Merchant Group Member is required or requested to carry out by Data Protection Laws, a Supervisory Authority or any similar regulatory authority responsible for the enforcement of Data Protection Laws in any country or territory, where Merchant or the relevant Merchant Affiliate undertaking an audit has identified the relevant requirement or request in its notice to Google or the relevant Google Affiliate of the audit or inspection.
+        3. for the purposes of more than one audit or inspection, in respect of each Contracted Processor, in any calendar year, except for any audits or inspections which a Merchant Group Member is required or requested to carry out by Data Protection Laws, a Supervisory Authority or any similar regulatory authority responsible for the enforcement of Data Protection Laws in any country or territory, where Merchant or the relevant Merchant Affiliate undertaking an audit has identified the relevant requirement or request in its notice to Supplier or the relevant Supplier Affiliate of the audit or inspection.
 
 11. ## International Transfers of Personal Data {#international-transfers}
 
-    1. If Google transfers any Personal Data to Subprocessors in countries which do not ensure an adequate level of data protection within the meaning of the Applicable Laws, Google will take such measures as are necessary to ensure the transfer is in compliance with the Applicable Laws.
+    1. If Supplier transfers any Personal Data to Subprocessors in countries which do not ensure an adequate level of data protection within the meaning of the Applicable Laws, Supplier will take such measures as are necessary to ensure the transfer is in compliance with the Applicable Laws.
 
 12. ## GDPR Specific Provisions {#gdpr-provisions}
 
     1. [Addendum 1](#addendum-details) to this Agreement sets out certain information regarding the Contracted Processors' Processing of the Merchant Personal Data as required by article 28(3) of the GDPR (and equivalent requirements of other Data Protection Laws). Nothing in [Addendum 1](#addendum-details) (including as amended pursuant to [this clause](#gdpr-provisions)) confers any right or imposes any obligation on any party to this Agreement.
 
-    2. Google and each Google Affiliate shall provide reasonable assistance to each Merchant Group Member with any data protection impact assessments, and prior consultations with Supervisory Authorities or other competent data privacy authorities, which Merchant reasonably considers to be required of any Merchant Group Member by article 35 or 36 of the GDPR or equivalent provisions of any other Data Protection Laws, in each case solely in relation to Processing of Merchant Personal Data by, and taking into account the nature of the Processing and information available to, the Contracted Processors.
+    2. Supplier and each Supplier Affiliate shall provide reasonable assistance to each Merchant Group Member with any data protection impact assessments, and prior consultations with Supervisory Authorities or other competent data privacy authorities, which Merchant reasonably considers to be required of any Merchant Group Member by article 35 or 36 of the GDPR or equivalent provisions of any other Data Protection Laws, in each case solely in relation to Processing of Merchant Personal Data by, and taking into account the nature of the Processing and information available to, the Contracted Processors.
 
-    3. To the extent that Google processes any personal data under this Agreement that originates from a GDPR Zone to a country that has not been designated by the Commission as providing an adequate level of protection for personal data, the parties agree to enter into the Standard Contractual Clauses, which are hereby incorporated into and form part of this Agreement. The parties hereby agree that:
+    3. To the extent that Supplier processes any personal data under this Agreement that originates from a GDPR Zone to a country that has not been designated by the Commission as providing an adequate level of protection for personal data, the parties agree to enter into the Standard Contractual Clauses, which are hereby incorporated into and form part of this Agreement. The parties hereby agree that:
 
         1. Data processing details set out in [Addendum 1](#addendum-details) of this Agreement shall apply for the purposes of Appendix 1 of the Standard Contractual Clauses;
 
         2. The technical and organizational security measures set out in [Addendum 2](#addendum-safety) of this Agreement shall apply for the purpose of Appendix 2 to the Standard Contractual Clauses; and
 
-        3. Google shall be deemed the "data importer" and the Merchant the "data exporter" under the Standard Contractual Clauses.
+        3. Supplier shall be deemed the "data importer" and the Merchant the "data exporter" under the Standard Contractual Clauses.
 
 13. ## US Privacy Law Specific Provisions {#us-provisions}
 
-    1. Google is a "Service Provider" for the purpose of any relevant US Data Protection Laws. The Merchant discloses personal data to Google solely for:
+    1. Supplier is a "Service Provider" for the purpose of any relevant US Data Protection Laws. The Merchant discloses personal data to Supplier solely for:
 
         1. a valid business purpose; and
 
-        2. for Google to perform the Services.
+        2. for Supplier to perform the Services.
 
-    2. To the extent that any US Data Protection Laws apply, Google will not, and will not authorise its Subprocessors to, re-identify any de-identified, anonymized, or pseudonymized data derived from personal data that is Processed by Google on behalf of the Merchant, unless instructed by Merchant in writing.
+    2. To the extent that any US Data Protection Laws apply, Supplier will not, and will not authorise its Subprocessors to, re-identify any de-identified, anonymized, or pseudonymized data derived from personal data that is Processed by Supplier on behalf of the Merchant, unless instructed by Merchant in writing.
 
 14. ## General Terms {#general}
 
@@ -286,7 +296,7 @@ schedule:
 
     2. ### Order of Precedence {#precedence}
 
-        1. Nothing in this Agreement reduces Google's or any Google Affiliate's obligations under the Principal Agreement in relation to the protection of Personal Data or permits Google or any Google Affiliate to Process (or permit the Processing of) Personal Data in a manner which is prohibited by the Principal Agreement.
+        1. Nothing in this Agreement reduces Supplier's or any Supplier Affiliate's obligations under the Principal Agreement in relation to the protection of Personal Data or permits Supplier or any Supplier Affiliate to Process (or permit the Processing of) Personal Data in a manner which is prohibited by the Principal Agreement.
 
         2. Subject to [clause 3](#processing), with regard to the subject matter of this Agreement, in the event of inconsistencies between the provisions of this Agreement and any other agreements between the parties, including the Principal Agreement and including (except where explicitly agreed otherwise in writing, signed on behalf of the parties) agreements entered into or purported to be entered into after the date of this Agreement, the provisions of this Agreement shall prevail.
 
@@ -322,11 +332,11 @@ This [Addendum 1](#addendum-details) includes certain details of the Processing 
 
     2. ### Data Importer
 
-        1. **Name**: Google.
+        1. **Name**: Supplier.
 
-        2. **Address**: Google Pty Ltd, Suite 4.07, Level 4, 50 Holt Street, Surry Hills, NSW Australia.
+        2. **Address**: Supplier Pty Ltd, 123 Fake St, NSW Australia.
 
-        3. **Contact person's name, position and contact details**: Richard Prangell, Data Protection Officer, richard.prangell@Google.io.
+        3. **Contact person's name, position and contact details**: John Smith, Data Protection Officer, john.smith@supplier.com.
 
         4. **Activities relevant to the data transferred under these Clauses**: The data importer operates an ecommerce marketing platform and service.
 
@@ -334,9 +344,9 @@ This [Addendum 1](#addendum-details) includes certain details of the Processing 
 
 # ADDENDUM 2 - Technical and Organisational Safety Measures {#addendum-safety}
 
-Google will maintain administrative, physical and technical safeguards designed to protect the security, confidentiality and integrity of the Merchant's personal data Processed by Google, as described in the Principal Agreement and this Agreement.
+Supplier will maintain administrative, physical and technical safeguards designed to protect the security, confidentiality and integrity of the Merchant's personal data Processed by Supplier, as described in the Principal Agreement and this Agreement.
 
-Google will not materially decrease the overall security of the Services during a subscription term.
+Supplier will not materially decrease the overall security of the Services during a subscription term.
 
 # ADDENDUM 3 - Standard Contractual Clauses - Supplementary Terms To Provide Additional Safeguards {#addendum-scc}
 
@@ -353,4 +363,4 @@ The data importer agrees and warrants:
 # ADDENDUM 4 - List of Sub-processors {#addendum-subprocessors}
 
 The Merchant has authorised the use of the Subprocessors set out at:
-<https://www.Google.io/gdpr/>
+<https://www.supplier.io/gdpr/>

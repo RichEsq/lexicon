@@ -144,8 +144,6 @@ schedule:
         1. comply with all applicable Applicable Laws in the Processing of Merchant Personal Data; and
 
         2. not Process Merchant Personal Data other than on the relevant Merchant Group Member's documented instructions unless Processing is required by Applicable Laws to which the relevant Contracted Processor is subject, in which case Supplier or the relevant Supplier Affiliate shall to the extent permitted by Applicable Laws inform the relevant Merchant Group Member of that legal requirement before the relevant Processing of that Personal Data. {#processing-instructions}
-    
-    unless its a Tuesday, in which case they can do nothing.
 
     3. Each Merchant Group Member:
 
@@ -155,7 +153,7 @@ schedule:
 
             2. in particular, transfer Merchant Personal Data to any country or territory,
 
-            as reasonably necessary for the provision of the Services and consistent with the Principal Agreement; and
+       as reasonably necessary for the provision of the Services and consistent with the Principal Agreement; and
 
         2. warrants and represents that it is and will at all relevant times remain duly and effectively authorised to give the instruction set out in [clause 3](#processing) on behalf of each relevant Merchant Affiliate.
 

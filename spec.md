@@ -260,6 +260,21 @@ A clause may contain multiple paragraphs. Subsequent paragraphs are indented to 
     2. At the end of this Agreement, each party must return all **Confidential Information**.
 ```
 
+#### 3.4.1. Continuation Content Indentation
+
+Continuation content within a clause — additional paragraphs, blockquotes, or tables — follows standard CommonMark indentation rules. To belong to a list item, continuation content must be indented to at least the **content column** of that item (the position after the `1. ` marker, not the marker itself).
+
+Since Lexicon uses 4 spaces per nesting level and the `1. ` marker occupies 3 characters, the content column is always `(4 × level) + 3`. In practice, indenting continuation content to the **next multiple of 4 spaces** (i.e., `4 × (level + 1)`) satisfies this requirement and keeps indentation consistent:
+
+| Parent clause level | Marker indent | Content column | Continuation indent |
+|--------------------|--------------:|---------------:|--------------------:|
+| Top-level (0)      | 0             | 3              | 4                   |
+| Clause (1)         | 4             | 7              | 8                   |
+| Sub-clause (2)     | 8             | 11             | 12                  |
+| Sub-sub-clause (3) | 12            | 15             | 16                  |
+
+This means continuation content uses the same indentation as a child clause would. For example, a blockquote within a sub-clause (level 2) must be indented by at least 12 spaces (not 11, which would associate it with the parent clause instead).
+
 ### 3.5. Blockquotes
 
 Blockquotes are used for material that does not form a structural part of the clause hierarchy — formulae, examples, or quoted text:

@@ -14,7 +14,7 @@ parties:
   - name: Tiny Company Pty Ltd
     specifier: ACN 123 456 987
     role: Merchant
-    entity_type: au-company
+    entity_type: us-company
 exhibits: 
   - title: Site Plan
     path: https://upload.wikimedia.org/wikipedia/commons/5/5c/Pair_of_white_domesticated_ducks.jpg
@@ -314,7 +314,7 @@ schedule:
 
 This [Addendum 1](#addendum-details) includes certain details of the Processing of Merchant Personal Data as required by Article 28(3) GDPR.
 
-1. ## LIST OF PARTIES
+1. ## List of Parties
 
     1. ### Data Exporter
 

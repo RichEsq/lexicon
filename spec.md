@@ -613,7 +613,7 @@ A processor identifies schedule items by matching the following phrases (case-in
 
 #### 6.4.1. Without a Processor
 
-Schedule items are ordinary defined terms in standard Markdown. The text `**Objection Period** has the meaning given by the Schedule.` renders as bold text followed by plain prose — perfectly readable without any processor.
+Schedule items are ordinary defined terms in standard Markdown. The text `**Objection Period** has the meaning given by the Schedule.` renders as bold text followed by plain prose.
 
 #### 6.4.2. With a Processor
 
@@ -659,7 +659,7 @@ Lexicon distinguishes between three types of attachments to a contract:
 
 ### 8.1. Addenda
 
-An addendum is an attached part of the contract that supplements but does not form part of the main body. Addenda may contain substantive terms, amend provisions in the body, or provide additional detail. If an addendum is removed, the contract body remains fully functional.
+By convention, an addendum is an attached part of the contract that supplements but does not form part of the main body. Addenda may contain substantive terms, amend provisions in the body, or provide additional detail. 
 
 #### 8.1.1. Syntax
 
@@ -671,13 +671,13 @@ Addendum content appears after the main contract body under a top-level heading 
 This addendum includes details of processing...
 ```
 
-The heading may optionally include a number (`# ADDENDUM 1 - Title`), but a processor auto-numbers addenda sequentially regardless of any number in the source heading. The title text is extracted from after the dash separator (any of `-`, `–`, `—`).
+The heading may optionally include a number (`# ADDENDUM 1 - Title`), but a processor should auto-numbers addenda sequentially regardless of any number in the source heading. The title text is extracted from after the dash separator (any of `-`, `–`, `—`).
 
 Any top-level heading (`#`) that does not begin with `ADDENDUM` will generate a warning. Only `ADDENDUM` headings are parsed as addendum content.
 
 #### 8.1.2. Content
 
-Addendum content is free-form Markdown (paragraphs, lists, tables, headings). It may include numbered clause lists, but does not follow the numbered clause structure of the main body unless appropriate.
+Addendum content is free-form Markdown (paragraphs, lists, tables, headings). It may include numbered clause lists, but does not continue the numbered clause structure of the main body.
 
 ### 8.2. Exhibits
 
@@ -693,7 +693,7 @@ When an exhibit has a `path`, a processor imports the referenced file and embeds
 - **Images** (PNG, JPG) are embedded in the exhibit section, scaled appropriately for the output format while preserving the original aspect ratio.
 - **PDF** files are embedded directly or converted to images, depending on the output format.
 
-When `path` is omitted, a processor generates a placeholder exhibit section with the exhibit number and title (e.g., "EXHIBIT 1 - Property Map"). In paginated output, the physical document can then be inserted manually when printing or assembling the final contract.
+When `path` is omitted, a processor should generate a placeholder exhibit section with the exhibit number and title (e.g., "EXHIBIT 1 - Property Map"). In paginated output, the physical document can then be inserted manually when printing or assembling the final contract.
 
 Relative paths are resolved against the directory containing the input Markdown file. HTTP and HTTPS URLs are fetched at processing time. Supported formats are PNG, JPG/JPEG, and PDF.
 
@@ -704,8 +704,8 @@ Relative paths are resolved against the directory containing the input Markdown 
 title: Deed of Release
 type: Deed
 date: 2017-11-05
-ref: "VL:RP:20161021"
-author: Richard Prangell (Viridian Lawyers)
+ref: "AB:CD:20161021"
+author: Lawyers Inc
 status: final
 version: 3
 parties:

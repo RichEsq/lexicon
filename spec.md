@@ -255,7 +255,7 @@ A clause may contain multiple paragraphs. Subsequent paragraphs are indented to 
 
     1. A party may terminate this Agreement with immediate effect.
 
-        Nothing in this clause shall allow a Party to act unreasonably.
+       Nothing in this clause shall allow a Party to act unreasonably.
 
     2. At the end of this Agreement, each party must return all **Confidential Information**.
 ```

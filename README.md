@@ -4,9 +4,9 @@ Lexicon is a plain-text legal contract format that is derived from Markdown.
 
 **Write contracts in plain text. Get professionally formatted output.**
 
-## What is Lexicon Markdown?
+## What is Lexicon?
 
-Lexicon Markdown extends standard Markdown with conventions for legal documents. A Lexicon document is valid Markdown that renders correctly in any Markdown viewer (GitHub, Obsidian, VS Code, etc.), but when processed by Lexicon tooling, gains:
+Lexicon extends standard Markdown with conventions for legal documents. A Lexicon document is valid Markdown that should render correctly in any Markdown viewer (GitHub, Obsidian, VS Code, etc.), but when processed by Lexicon tooling, gains:
 
 - **Legal clause numbering** — `1.`, `1.1`, `(a)`, `(i)`
 - **Cross-reference resolution** — anchors like `{#termination}` and links like `[clause 3](#termination)` are auto-resolved to correct clause numbers

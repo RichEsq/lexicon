@@ -1,6 +1,6 @@
 # Lexicon
 
-Lexicon is a plain-text legal contract format that is backwards compatible with Markdown.
+Lexicon is a plain-text legal contract format that is derived from Markdown.
 
 **Write contracts in plain text. Get professionally formatted output.**
 

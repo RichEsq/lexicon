@@ -246,9 +246,9 @@ Without a processor, standard Markdown renderers will display these as nested nu
 
 > **Important:** Blank lines are required between list items. This is standard CommonMark "loose list" syntax and is necessary for nested clauses to be parsed correctly. Without blank lines, a nested item may be treated as inline text within its parent rather than as a separate clause.
 
-### 3.4. Multiple Paragraphs Within a Clause
+### 3.4. Multiple Paragraphs, Quotes and Tables Within a Clause
 
-A clause may contain multiple paragraphs. Subsequent paragraphs are indented to the same level as their parent clause and separated by a blank line:
+A single clause may contain multiple paragraphs, blockquotes or tables. Subsequent paragraphs, blockquotes, and tables are indented at least the **content column** of the parent clause (the position after the `1. ` marker, not the marker itself) and separated by a blank line:
 
 ```markdown
 1. ## Termination
@@ -260,9 +260,19 @@ A clause may contain multiple paragraphs. Subsequent paragraphs are indented to 
     2. At the end of this Agreement, each party must return all **Confidential Information**.
 ```
 
-#### 3.4.1. Continuation Content Indentation
+Blockquotes are used for material that does not form a structural part of the clause hierarchy — formulae, examples, or quoted text:
 
-Continuation content within a clause — additional paragraphs, blockquotes, or tables — follows standard CommonMark indentation rules. To belong to a list item, continuation content must be indented to at least the **content column** of that item (the position after the `1. ` marker, not the marker itself).
+```markdown
+1. ## Termination Fee
+
+    1. The Lessee will pay a termination fee calculated as follows:
+
+       > (2 × A) − C
+       >
+       > Where "A" has the value of 1 month's rent
+       >
+       > Where "C" has the value of the Rental Bond
+```
 
 Since Lexicon uses 4 spaces per nesting level and the `1. ` marker occupies 3 characters, the content column is always `(4 × level) + 3`. In practice, indenting continuation content to the **next multiple of 4 spaces** (i.e., `4 × (level + 1)`) satisfies this requirement and keeps indentation consistent:
 
@@ -273,23 +283,6 @@ Since Lexicon uses 4 spaces per nesting level and the `1. ` marker occupies 3 ch
 | Sub-clause (2)     | 8             | 11             | 12                  |
 | Sub-sub-clause (3) | 12            | 15             | 16                  |
 
-This means continuation content uses the same indentation as a child clause would. For example, a blockquote within a sub-clause (level 2) must be indented by at least 12 spaces (not 11, which would associate it with the parent clause instead).
-
-### 3.5. Blockquotes
-
-Blockquotes are used for material that does not form a structural part of the clause hierarchy — formulae, examples, or quoted text:
-
-```markdown
-1. ## Termination Fee
-
-    1. The Lessee will pay a termination fee calculated as follows:
-
-        > (2 × A) − C
-        >
-        > Where "A" has the value of 1 month's rent
-        >
-        > Where "C" has the value of the Rental Bond
-```
 
 ### 3.6. Sub-headings Within a Clause
 

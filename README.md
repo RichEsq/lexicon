@@ -1,8 +1,8 @@
 # Lexicon
 
-Lexicon is a plain-text legal contract format built on standard Markdown, plus tooling to convert Lexicon Markdown contracts into formatted documents.
+Lexicon is a plain-text legal contract format built on standard Markdown.
 
-**Write contracts in Markdown. Get professionally formatted Word documents.**
+**Write contracts in Markdown. Get professionally formatted output.**
 
 ## What is Lexicon Markdown?
 

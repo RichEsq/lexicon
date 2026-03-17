@@ -308,7 +308,7 @@ Superscript text is marked with `^` delimiters:
 ^2^
 ```
 
-This renders as superscript in the output document. Useful for footnote markers, ordinals, or mathematical notation.
+This renders as superscript in the output document. Not commonly used in contract drafting, but available if required.
 
 ### 3.8. Prose Sections
 
@@ -346,7 +346,7 @@ Ordered list items in the recitals section use the same numbering hierarchy as b
 
 #### 3.9.3. Cross-References and Defined Terms
 
-Recitals support `{#id}` anchors and cross-references. A cross-reference to a recital resolves to "Recital 1", "Recital 1.1", etc. Bold terms in recitals are validated in the same way as the document body.
+Recitals support `{#id}` anchors and cross-references. A cross-reference to a recital resolves to "Recital 1", "Recital 1.1", etc. Defined terms in recitals are validated in the same way as the document body.
 
 #### 3.9.4. Rules
 
@@ -429,7 +429,7 @@ A processor identifies inline definitions by matching bold text within parenthes
 
 ### 4.4. References to Defined Terms
 
-After a term is defined, all subsequent uses appear as ordinary (unformatted) text:
+After a term is defined, all subsequent uses should appear as ordinary (unformatted) text:
 
 ```markdown
 1. The Employee must return all Confidential Information to the Employer.

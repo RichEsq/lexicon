@@ -2,11 +2,11 @@
 
 **Write contracts in plain text. Get professionally formatted output.**
 
-Lexicon is a plain-text legal contract format derived from Markdown. It extends standard Markdown with conventions for legal clause numbering, defined terms, cross-references, schedules, and signature blocks — then compiles to polished `.docx` output.
+Lexicon is a plain-text legal contract format derived from Markdown. It extends standard Markdown with conventions for legal clause numbering, defined terms, cross-references, schedules, and signature blocks — then compiles to professionally formatted output.
 
 A Lexicon document is valid Markdown. It renders correctly in GitHub, Obsidian, VS Code, or any Markdown viewer. But when processed by Lexicon tooling, it becomes a production-ready legal contract.
 
-[Website](https://lexicon.esq) | [Try the Playground](https://play.lexicon.esq) | [Specification](spec.md) | [Example Document](example.md)
+[Website](https://lexicon.esq) | [Try the Playground](https://play.lexicon.esq) | [Specification](spec.md) | [Example Document](example.md?plain=1)
 
 <!-- TODO: Screenshot — hero image showing Lexicon source on the left, rendered .docx output on the right -->
 

@@ -1,28 +1,20 @@
 # Lexicon
 
-Lexicon is a plain-text legal contract format that is derived from Markdown.
-
 **Write contracts in plain text. Get professionally formatted output.**
 
-## What is Lexicon?
+Lexicon is a plain-text legal contract format derived from Markdown. It extends standard Markdown with conventions for legal clause numbering, defined terms, cross-references, schedules, and signature blocks — then compiles to polished `.docx` output.
 
-Lexicon extends standard Markdown with conventions for legal documents. A Lexicon document is valid Markdown that should render correctly in any Markdown viewer (GitHub, Obsidian, VS Code, etc.), but when processed by Lexicon tooling, gains:
+A Lexicon document is valid Markdown. It renders correctly in GitHub, Obsidian, VS Code, or any Markdown viewer. But when processed by Lexicon tooling, it becomes a production-ready legal contract.
 
-- **Legal clause numbering** — `1.`, `1.1`, `(a)`, `(i)`
-- **Cross-reference resolution** — anchors like `{#termination}` and links like `[clause 3](#termination)` are auto-resolved to correct clause numbers
-- **Defined term validation** — `**Confidential Information** means ...` defines a term; the processor warns if it's never used
-- **Cover pages, TOC, headers/footers** — generated from YAML front-matter metadata
-- **Schedule generation** — defined terms referencing a schedule are auto-collected into a schedule page
-- **Signature pages** — jurisdiction-aware execution blocks with configurable templates
-- **Draft watermarks** — automatic "DRAFT" watermark when `status: draft`
+[Website](https://lexicon.esq) | [Try the Playground](https://play.lexicon.esq) | [Specification](spec.md) | [Example Document](example.md)
 
-Without a processor, Lexicon Markdown reads as a clean, well-structured document. With a processor, it becomes a production-ready legal contract.
+<!-- TODO: Screenshot — hero image showing Lexicon source on the left, rendered .docx output on the right -->
 
 ## Why Markdown for Legal Documents?
 
-Legal drafting has been locked inside opaque binary formats (`.docx`, `.pdf`) for decades. This creates real problems: contracts can't be meaningfully diffed, version control is limited to "Final_v3_FINAL(2).docx", and the formatting layer is tightly coupled to the content.
+Legal drafting has been locked inside opaque binary formats (`.docx`, `.pdf`) for decades. Contracts can't be meaningfully diffed, version control is limited to "Final_v3_FINAL(2).docx", and the formatting layer is tightly coupled to the content.
 
-Markdown changes this. But beyond the usual benefits of plain text — git-native version control, clean diffs, editor independence — there's a more compelling reason in 2026:
+Markdown fixes the obvious problems — git-native version control, clean diffs, editor independence. But there's a more compelling reason in 2026:
 
 **LLMs are exceptionally good at reading and writing Markdown.**
 
@@ -34,7 +26,7 @@ Large language models are trained overwhelmingly on plain text and Markdown. Whe
 - An LLM can **validate consistency** — checking that defined terms are used, cross-references resolve, and clause numbering holds
 - The entire **negotiation history** lives in git commits, not email chains of annotated Word documents
 
-Lexicon Markdown makes contracts a first-class input and output format for AI-assisted legal work, without sacrificing the formatted `.docx` output that clients and counterparties expect.
+Lexicon makes contracts a first-class input and output format for AI-assisted legal work, without sacrificing the `.docx` output that clients and counterparties expect.
 
 ## Quick Example
 
@@ -72,37 +64,35 @@ schedule:
         1. This includes any Confidential Information held by the Employee.
 ```
 
-## Repository Structure
+A few things to notice:
 
-| Path | Description |
-|------|-------------|
-| [`spec.md`](spec.md) | The Lexicon Markdown specification (v1.0-draft) |
-| [`example.md`](example.md) | A real-world Data Processing Addendum in Lexicon format |
-| [`lexicon-docx/`](lexicon-docx/) | Rust CLI processor — converts Lexicon Markdown to `.docx` |
+- **YAML front-matter** at the top declares the parties, document type, and a schedule — the processor uses this to generate cover pages, signature blocks, and schedule sections
+- **`{#definitions}`** is a cross-reference anchor — other clauses can link to it with `[clause 1](#definitions)`, and the processor auto-resolves the clause number
+- **`**Claim** means ...`** defines a term — the processor tracks it and warns if it's never referenced
+- **`**Payment** has the meaning given by the Schedule`** — the processor detects this phrase and auto-generates a schedule page with a blank entry for "Payment"
+- Nested numbered lists (`1.`, indented `1.`, indented `1.`) become legal numbering: `1.`, `1.1`, `(a)`, `(i)`
 
-## Tooling
+<!-- TODO: Screenshot — the above example rendered as a formatted .docx -->
 
-### lexicon-docx
+## What the Processor Does
 
-The [`lexicon-docx`](lexicon-docx/) CLI converts Lexicon Markdown files into formatted Word documents with legal numbering, cover pages, tables of contents, signature blocks, and more. See the [lexicon-docx README](lexicon-docx/README.md) for installation and usage.
+Without a processor, you have a clean, readable Markdown document. With the processor, you get:
 
-```bash
-cd lexicon-docx
-cargo build --release
-cargo run -- build ../example.md -o output.docx
-```
+- **Legal clause numbering** — `1.`, `1.1`, `(a)`, `(i)`
+- **Cross-reference resolution** — `[clause 1](#definitions)` auto-resolves to the correct clause number
+- **Defined term validation** — warns if a defined term is never used
+- **Cover pages, TOC, headers/footers** — generated from front-matter metadata
+- **Schedule generation** — defined terms referencing a schedule are auto-collected into a schedule page
+- **Signature pages** — jurisdiction-aware execution blocks
+- **Draft watermarks** — automatic "DRAFT" watermark when `status: draft`
 
-## Specification
+<!-- TODO: Screenshot — example of a generated cover page or signature block -->
 
-The full Lexicon Markdown specification is in [`spec.md`](spec.md). It covers:
+## Try It
 
-- Document structure and clause hierarchy
-- YAML front-matter fields and validation rules
-- Defined terms and term validation
-- Cross-reference anchors and resolution
-- Schedule declaration and phrase-based item detection
-- Addenda and exhibit declarations
-- Processor capabilities and requirements
+The fastest way to see Lexicon in action is the **[Playground](https://play.lexicon.esq)** — paste or edit Lexicon Markdown on the left, see formatted output on the right.
+
+<!-- TODO: Screenshot — playground UI -->
 
 ## Front-Matter Fields
 
@@ -127,6 +117,25 @@ schedule:                      # optional
   - title: Schedule            # generates a schedule page from defined terms
 ---
 ```
+
+## Specification
+
+The full Lexicon Markdown specification is in [`spec.md`](spec.md). It covers:
+
+- Document structure and clause hierarchy
+- YAML front-matter fields and validation rules
+- Defined terms and term validation
+- Cross-reference anchors and resolution
+- Schedule declaration and phrase-based item detection
+- Addenda and exhibit declarations
+- Processor capabilities and requirements
+
+## Repository Structure
+
+| Path | Description |
+|------|-------------|
+| [`spec.md`](spec.md) | The Lexicon Markdown specification (v1.0-draft) |
+| [`example.md`](example.md) | A real-world Data Processing Agreement in Lexicon format |
 
 ## License
 

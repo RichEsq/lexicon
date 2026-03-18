@@ -73,9 +73,13 @@ schedule:
 
             4. any data protection or privacy laws of:
 
-                1. The Commonwealth of Australia, or any state therein;
+                1. The Commonwealth of Australia, or any state thereinm including:
                     
-                    2. This is a level 6 test.
+                    1. New South Wales;
+
+                    2. Victoria;
+                  
+                    3. Queensland;
 
                 2. Canada, or any province therein; and
 

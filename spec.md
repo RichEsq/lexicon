@@ -155,7 +155,7 @@ parties:
   - role: Employer
 ```
 
-A processor should handle incomplete party entries gracefully — for example, generating signature blocks only when `name` is present, and rendering placeholder text (e.g., "[Name]") in party preambles when `name` is omitted.
+A processor should handle incomplete party entries gracefully — rendering placeholder text (e.g., "[Name]") in signature blocks and party preambles when `name` is omitted.
 
 For example, a processor might use `entity_type` to interpret the `specifier` field according to local convention: Australian companies are typically identified by their ACN, whereas US companies are identified by their state of incorporation or principal place of business.
 

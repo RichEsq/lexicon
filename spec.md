@@ -57,9 +57,14 @@ The plain-language title of the document. This will appear as the document title
 title: Contract for the Sale of Business
 ```
 
-#### 2.2.2. `date` (required)
+#### 2.2.2. `date` (optional)
 
-The effective date of the contract. Must be in `YYYY-MM-DD` format. A processor must validate this format.
+The effective date of the contract. Must be in `YYYY-MM-DD` format when present. A processor must validate this format if the field is provided.
+
+If omitted, the date is assumed to be unknown or to be determined at the time of execution. A processor should handle the absence as follows:
+
+- **Paginated formats (PDF, DOCX):** render a blank line or underscored space in place of the date, allowing for manual completion when the document is printed and signed.
+- **Dynamic formats (HTML):** render a placeholder (e.g., "[Date]") that signals the value is pending.
 
 ```yaml
 date: 2026-01-15
@@ -125,7 +130,7 @@ A list of parties to the contract. Each party has the following sub-fields:
 
 | Sub-field     | Required | Description                                                        |
 | ------------- | -------- | ------------------------------------------------------------------ |
-| `name`        | Yes      | The legal name of the party.                                       |
+| `name`        | No       | The legal name of the party.                                       |
 | `specifier`   | No       | Identifying detail (address, ACN, ABN, registration number, etc.). |
 | `role`        | Yes      | The drafting reference used throughout the contract (e.g., "Employer", "Contractor"). |
 | `entity_type` | No       | A compound `{jurisdiction}-{type}` string identifying the kind of legal entity (e.g., `au-company`, `uk-individual`). The jurisdiction component must be a lowercase ISO 3166-1 alpha-2 country code. Used by a processor to apply jurisdiction- and entity-specific conventions (e.g., signature block format, execution clauses). |
@@ -141,6 +146,16 @@ parties:
     role: Employer
     entity_type: au-company
 ```
+
+When party details are not yet known (e.g., the document is being prepared as a template), only the `role` is required:
+
+```yaml
+parties:
+  - role: Employee
+  - role: Employer
+```
+
+A processor should handle incomplete party entries gracefully — for example, generating signature blocks only when `name` is present, and rendering placeholder text (e.g., "[Name]") in party preambles when `name` is omitted.
 
 For example, a processor might use `entity_type` to interpret the `specifier` field according to local convention: Australian companies are typically identified by their ACN, whereas US companies are identified by their state of incorporation or principal place of business.
 
@@ -818,7 +833,7 @@ A Lexicon Markdown processor should implement the following capabilities:
 
 ### 10.2. Validation
 
-1. Validate that `date` is in `YYYY-MM-DD` format.
+1. Validate that `date`, if present, is in `YYYY-MM-DD` format.
 2. Validate that all cross-references point to existing anchors.
 3. Warn on defined terms that are never used in the document text.
 4. Warn if a declared schedule has no referencing terms, or if a defined term references a schedule title not declared in the front-matter.

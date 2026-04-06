@@ -862,9 +862,9 @@ A processor may target any output format. Common targets include:
 
 The source format uses plain `1.` markers at every nesting level (see section 3.3). The numbering convention applied in the rendered output is a processor concern — the same source document may be rendered with different conventions depending on the target jurisdiction or house style.
 
-A processor must support the following three conventions and should default to **Decimal**:
+A processor must support the following three conventions and should default to **Commonwealth**:
 
-#### 10.5.1. Decimal
+#### 10.5.1. Commonwealth
 
 Common in Australian, UK, and Commonwealth commercial contracts.
 
@@ -877,7 +877,7 @@ Common in Australian, UK, and Commonwealth commercial contracts.
 | Paragraph      | `(A)`       |
 | Sub-paragraph  | `(I)`       |
 
-#### 10.5.2. Pure Decimal
+#### 10.5.2. Decimal
 
 Common in EU legislation, international contracts (e.g., FIDIC), and technical or engineering documents.
 

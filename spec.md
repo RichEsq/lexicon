@@ -246,18 +246,20 @@ Sub-clauses are represented by indented ordered list items. Each level of nestin
         2. the other party undergoes an **Insolvency Event**.
 ```
 
-The hierarchy is:
+The hierarchy supports six mandatory levels of nesting:
 
-| Level          | Syntax                           | Rendered as (by processor) |
-| -------------- | -------------------------------- | -------------------------- |
-| Top-level      | `1. ## Heading`                  | `1. Heading`               |
-| Clause         | `    1. Text`                    | `1.1` or `1.1.`           |
-| Sub-clause     | `        1. Text`                | `(a)`                      |
-| Sub-sub-clause | `            1. Text`            | `(i)`                      |
-| Paragraph      | `                1. Text`        | `(A)`                      |
-| Sub-paragraph  | `                    1. Text`    | `(I)`                      |
+| Level          | Syntax                           | Indentation |
+| -------------- | -------------------------------- | ----------- |
+| Top-level      | `1. ## Heading`                  | 0 spaces    |
+| Clause         | `    1. Text`                    | 4 spaces    |
+| Sub-clause     | `        1. Text`                | 8 spaces    |
+| Sub-sub-clause | `            1. Text`            | 12 spaces   |
+| Paragraph      | `                1. Text`        | 16 spaces   |
+| Sub-paragraph  | `                    1. Text`    | 20 spaces   |
 
-Without a processor, standard Markdown renderers will display these as nested numbered lists (`1.`, `1.`, `1.`, `1.`). With a processor (e.g., Pandoc with a custom filter, or a dedicated tool), the numbering is transformed to the legal convention shown in the table above.
+The source format is numbering-scheme agnostic — every level uses `1.` markers regardless of the output convention. A processor transforms the numbering into the appropriate legal convention at render time (see section 10.5). A processor must support all six levels; it may optionally support additional levels beyond six.
+
+Without a processor, standard Markdown renderers will display these as nested numbered lists (`1.`, `1.`, `1.`, `1.`). With a processor (e.g., Pandoc with a custom filter, or a dedicated tool), the numbering is transformed to the chosen legal convention.
 
 > **Important:** Blank lines are required between list items. This is standard CommonMark "loose list" syntax and is necessary for nested clauses to be parsed correctly. Without blank lines, a nested item may be treated as inline text within its parent rather than as a separate clause.
 
@@ -357,7 +359,7 @@ The recitals section supports the same content types as the document body: order
 
 #### 3.9.2. Numbering
 
-Ordered list items in the recitals section use the same numbering hierarchy as body clauses: `1.`, `1.1`, `(a)`, `(i)`, `(A)`, `(I)`. Numbering restarts at 1 within the recitals section (independent of the body clause numbering).
+Ordered list items in the recitals section use the same numbering hierarchy and convention as body clauses (see section 10.5). Numbering restarts at 1 within the recitals section (independent of the body clause numbering).
 
 #### 3.9.3. Cross-References and Defined Terms
 
@@ -841,7 +843,7 @@ A Lexicon Markdown processor should implement the following capabilities:
 ### 10.3. Transformation
 
 1. Auto-resolve cross-references: replace display text with correct clause numbers.
-2. Transform numbering to legal convention (`1.1`, `(a)`, `(i)`).
+2. Transform numbering to the selected legal convention (see section 10.5).
 3. Strip anchor syntax from rendered output.
 4. Generate a definitions glossary / schedule.
 5. Generate schedule sections from defined terms that reference declared schedules.
@@ -855,6 +857,53 @@ A processor may target any output format. Common targets include:
 2. **DOCX** — a Word document with legal numbering, formatted parties block, cover page, addenda, and exhibits.
 3. **PDF** — a paginated document equivalent to the DOCX output.
 4. **HTML** — a web-renderable document with structured sections, embedded images, and interactive navigation.
+
+### 10.5. Output Numbering Conventions
+
+The source format uses plain `1.` markers at every nesting level (see section 3.3). The numbering convention applied in the rendered output is a processor concern — the same source document may be rendered with different conventions depending on the target jurisdiction or house style.
+
+A processor must support the following three conventions and should default to **Decimal**:
+
+#### 10.5.1. Decimal
+
+Common in Australian, UK, and Commonwealth commercial contracts.
+
+| Level          | Rendered as |
+| -------------- | ----------- |
+| Top-level      | `1.`        |
+| Clause         | `1.1`       |
+| Sub-clause     | `(a)`       |
+| Sub-sub-clause | `(i)`       |
+| Paragraph      | `(A)`       |
+| Sub-paragraph  | `(I)`       |
+
+#### 10.5.2. Pure Decimal
+
+Common in EU legislation, international contracts (e.g., FIDIC), and technical or engineering documents.
+
+| Level          | Rendered as |
+| -------------- | ----------- |
+| Top-level      | `1.`        |
+| Clause         | `1.1`       |
+| Sub-clause     | `1.1.1`     |
+| Sub-sub-clause | `1.1.1.1`   |
+| Paragraph      | `1.1.1.1.1` |
+| Sub-paragraph  | `1.1.1.1.1.1` |
+
+#### 10.5.3. US Traditional (Outline)
+
+Common in American litigation, corporate governance, and transactional documents.
+
+| Level          | Rendered as |
+| -------------- | ----------- |
+| Top-level      | `I.`        |
+| Clause         | `A.`        |
+| Sub-clause     | `1.`        |
+| Sub-sub-clause | `a.`        |
+| Paragraph      | `(1)`       |
+| Sub-paragraph  | `(a)`       |
+
+A processor may optionally support additional numbering conventions beyond these three (e.g., UK legislative, US federal regulation).
 
 ## 11. Summary of Syntax
 

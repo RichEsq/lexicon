@@ -372,6 +372,24 @@ Recitals support `{#id}` anchors and cross-references. A cross-reference to a re
 - When a recitals section is present, a body heading is required before the operative clauses. A processor should warn if this is missing.
 - Both the recitals heading and the body heading appear in the table of contents.
 
+### 3.10. Bullet Points (Unordered Lists)
+
+Lexicon Markdown uses ordered lists (`1.` markers) for all structured content (see sections 3.3 and 10.5). Unordered list markers (`-`, `*`, `+`) are not part of the structured outline and should generally be avoided.
+
+The only places bullet points are expressly contemplated are within **prose sections** (section 3.8) and **addendum content** (section 8.1.2), where free-form Markdown — including unordered lists — is permitted as ordinary content.
+
+#### 3.10.1. Fallback Behaviour
+
+Bullet points are a common Markdown element, and authors may include them — for example, when copying content from other sources or drafting informally. To preserve cross-renderer compatibility, the following fallback handling is **recommended** (but not mandatory):
+
+1. A processor should **render** the bullet as an unordered list item at the indentation level implied by its position in the source — a bullet nested inside a level-2 clause renders as an unordered list item at level 3, with no clause number assigned.
+
+2. A processor should **emit a warning** (not an error) identifying the bullet's location, so the author can review whether it was intentional.
+
+3. A processor should **skip clause numbering** for the bullet — it is not assigned a clause number and is not addressable by `{#id}` anchors or cross-references.
+
+A conformant processor may implement stricter handling (e.g., rejecting bullets inside the clause hierarchy) or more permissive handling. This section describes a safe default.
+
 ## 4. Defined Terms
 
 ### 4.1. Overview
@@ -912,6 +930,7 @@ A processor may optionally support additional numbering conventions beyond these
 | Meta properties      | YAML front-matter (`---`)                       | Yes (widely supported) |
 | Top-level clause     | `1. ## Heading`                                 | Yes |
 | Sub-clauses          | Indented ordered lists (4 spaces per level)     | Yes |
+| Unordered lists      | `- text` (prose/addenda only; warning if used in clause hierarchy) | Yes |
 | Multiple paragraphs  | Blank line + indented continuation              | Yes |
 | Blockquotes          | `>`                                             | Yes |
 | Sub-headings         | `### Heading` inside list item                  | Yes |

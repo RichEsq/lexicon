@@ -1,7 +1,7 @@
 # Lexicon Markdown Spec
 
 **Version**: 1.0-draft
-**Date**: 2026-03-09
+**Date**: 2026-08-11
 
 ## 1. Overview
 
@@ -261,11 +261,13 @@ The source format is numbering-scheme agnostic — every level uses `1.` markers
 
 Without a processor, standard Markdown renderers will display these as nested numbered lists (`1.`, `1.`, `1.`, `1.`). With a processor (e.g., Pandoc with a custom filter, or a dedicated tool), the numbering is transformed to the chosen legal convention.
 
+Because a processor renumbers every item on render, the ordinal an author types is discarded. Authors are therefore **strongly recommended** to write `1.` for every marker at every level. Hand-numbering the source (`1.`, `2.`, `3.` …) is permitted and does not change the rendered output, but a marker of `10.` or wider shifts the clause's content column, which affects where continuation content must be indented — see section 3.4 and the hazard note in section 3.4.1. Writing every marker as `1.` keeps the content column fixed at `(4 × level) + 3` and makes that hazard unreachable.
+
 > **Important:** Blank lines are required between list items. This is standard CommonMark "loose list" syntax and is necessary for nested clauses to be parsed correctly. Without blank lines, a nested item may be treated as inline text within its parent rather than as a separate clause.
 
 ### 3.4. Multiple Paragraphs, Quotes and Tables Within a Clause
 
-A single clause may contain multiple paragraphs, blockquotes or tables. Subsequent paragraphs, blockquotes, and tables are indented at least the **content column** of the parent clause (the position after the `1. ` marker, not the marker itself) and separated by a blank line:
+A single clause may contain multiple paragraphs, blockquotes or tables. Subsequent paragraphs, blockquotes, and tables must be indented to at least the **content column** of the parent clause (the position immediately after its list marker, not the position of the marker itself) and separated by a blank line:
 
 ```markdown
 1. ## Termination
@@ -291,7 +293,21 @@ Blockquotes are used for material that does not form a structural part of the cl
        > Where "C" has the value of the Rental Bond
 ```
 
-Since Lexicon uses 4 spaces per nesting level and the `1. ` marker occupies 3 characters, the content column is always `(4 × level) + 3`. In practice, indenting continuation content to the **next multiple of 4 spaces** (i.e., `4 × (level + 1)`) satisfies this requirement and keeps indentation consistent:
+The content column is a property of the **marker as written in the source**, not of the nesting level. It is:
+
+```
+content column = marker indent + length of the marker literal + spaces after the marker
+```
+
+For the recommended `1. ` marker the literal is 2 characters followed by 1 space, so the content column is `(4 × level) + 3`. That formula holds **only while every marker is a single digit**. A wider marker pushes the content column further right:
+
+| Marker at indent 4 | Marker literal | Content column |
+|--------------------|---------------:|---------------:|
+| `1. `              | 2              | 7              |
+| `10. `             | 3              | 8              |
+| `100. `            | 4              | 9              |
+
+When every marker is written as `1.` — as recommended in section 3.3 — the content column is fixed per level, and indenting continuation content to the **next multiple of 4 spaces** (i.e., `4 × (level + 1)`) always satisfies the requirement and keeps indentation consistent:
 
 | Parent clause level | Marker indent | Content column | Continuation indent |
 |--------------------|--------------:|---------------:|--------------------:|
@@ -300,13 +316,26 @@ Since Lexicon uses 4 spaces per nesting level and the `1. ` marker occupies 3 ch
 | Sub-clause (2)     | 8             | 11             | 12                  |
 | Sub-sub-clause (3) | 12            | 15             | 16                  |
 
+Note that `4 × (level + 1)` is a safe target for 1- and 2-digit markers but not for 3-digit ones: a `100. ` marker at indent 4 has a content column of 9, and the next multiple of 4 is 8. Deriving the column from the marker literal is the general rule; `4 × (level + 1)` is a shortcut that holds only under the all-`1.` recommendation.
+
+#### 3.4.1. Under-Indented Continuation Content (Hazard)
+
+Continuation content indented **below** its clause's content column does not merely render at the wrong indent. Under CommonMark it stops being part of that clause, and one of two things happens — neither of which is visible in the rendered output:
+
+1. **Discarded.** If the shortfall is 4 or more spaces relative to the nearest enclosing list item's content column, the block is reinterpreted as an *indented code block*. Processors that do not handle block-level code inside a clause body drop it from the output entirely. A paragraph indented to column 7 under a `10. ` marker at indent 4 (content column 8) is a worked example: it falls 1 short of its own clause but sits 4 past the enclosing top-level item's content column of 3, so it becomes a code block and vanishes.
+
+2. **Reattached.** If the shortfall is smaller, the block remains a paragraph but attaches to an ancestor clause instead of the intended one. It renders normally, one or more levels too shallow, under the wrong clause. In a contract this means a proviso can silently come to govern a different clause than the drafter intended.
+
+Under-indentation also terminates the enclosing list. Markers following the escaped block begin a new list, which may cause a processor to restart clause numbering at that point.
+
+Because the second mode produces output that is complete and plausible, proofreading will not reliably catch it. Processors should detect and report both modes — see section 10.2.
 
 ### 3.6. Sub-headings Within a Clause
 
 Where a clause requires a sub-heading (e.g., for grouped terms within a miscellaneous clause), use a `###` heading inside the list item:
 
 ```markdown
-14. ## General Terms
+1. ## General Terms
 
     1. ### Governing Law and Jurisdiction
 
@@ -857,6 +886,9 @@ A Lexicon Markdown processor should implement the following capabilities:
 2. Validate that all cross-references point to existing anchors.
 3. Warn on defined terms that are never used in the document text.
 4. Warn if a declared schedule has no referencing terms, or if a defined term references a schedule title not declared in the front-matter.
+5. Report continuation content that is indented below its clause's content column (see section 3.4.1), computing the required column from the source marker rather than the nesting level. Content that will be discarded should be an **error**; content that will be reattached to an ancestor clause should be a **warning** naming the clause it will attach to.
+6. Warn on any source list ordinal of `10.` or wider, since these shift the content column and are discarded on render (see section 3.3). A processor may offer to normalise such ordinals to `1.`, which does not change the rendered numbering.
+7. Report any block-level content parsed from a clause body that the processor does not render. Indented code blocks inside a clause body are almost always mis-indented continuation content rather than intentional code, and should never be dropped silently.
 
 ### 10.3. Transformation
 
@@ -931,7 +963,7 @@ A processor may optionally support additional numbering conventions beyond these
 | Top-level clause     | `1. ## Heading`                                 | Yes |
 | Sub-clauses          | Indented ordered lists (4 spaces per level)     | Yes |
 | Unordered lists      | `- text` (prose/addenda only; warning if used in clause hierarchy) | Yes |
-| Multiple paragraphs  | Blank line + indented continuation              | Yes |
+| Multiple paragraphs  | Blank line + continuation indented to the clause's content column | Yes |
 | Blockquotes          | `>`                                             | Yes |
 | Sub-headings         | `### Heading` inside list item                  | Yes |
 | Superscript          | `^text^`                                        | Partial (some renderers support it) |

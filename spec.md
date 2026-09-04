@@ -88,13 +88,24 @@ author: Richard Prangell (Viridian Lawyers)
 
 #### 2.2.5. `status` (optional)
 
-The current status of the document. Must be one of the following values:
+The current legal status of the document. Must be one of the following values:
 
 | Value      | Description                                                              |
 | ---------- | ------------------------------------------------------------------------ |
-| `draft`    | The document is a working draft, not yet agreed by the parties.          |
-| `final`    | The document has been agreed but not yet executed.                       |
-| `executed` | The document has been executed (signed) by the parties.                  |
+| `draft`    | The document is a working draft. Its terms are not settled and it is not in force. |
+| `final`    | The terms are settled, but the document is not yet in force.             |
+| `in-force` | The document is in force as written.                                     |
+
+`executed` and `published` are accepted as aliases for `in-force`. They record how the document came into force:
+
+| Alias       | Meaning                                                                 |
+| ----------- | ----------------------------------------------------------------------- |
+| `executed`  | In force because it has been signed by the parties.                     |
+| `published` | In force because it has been published unilaterally. It requires no signature. |
+
+A processor must treat `in-force`, `executed` and `published` identically. It should not rewrite the value in the source document — the alias is a record of how the document came into force, and normalising it away removes the only thing distinguishing, for example, a signed deed poll from a published terms of service.
+
+Comparison of `status` values is case-insensitive and ignores whitespace, hyphens and underscores between words, so `in-force`, `in force`, `In Force`, `in_force` and `inforce` are the same value. A processor should report an unrecognised value as an error.
 
 If omitted, no status is assumed. A processor may use this field to render a watermark (e.g., "DRAFT") or status indicator on the output document.
 
@@ -126,7 +137,16 @@ version: "2.1.0"
 
 #### 2.2.8. `parties` (required)
 
-A list of parties to the contract. Each party has the following sub-fields:
+A list of parties to the document. At least one party is required, and each entry must specify a `role`. An empty list is an error: a document that identifies nobody it binds is not a legal instrument, and a processor should reject it rather than render it.
+
+Most documents name two or more parties. Some name exactly one:
+
+- a **deed poll**, executed by a single party in favour of the world; or
+- a **unilaterally published document** — terms of service, privacy policy, acceptable use policy, licence — where the publisher is the only party capable of being named, and the counterparty is whoever accepts or relies on it.
+
+In the one-party case the sole party should still be fully identified. Many jurisdictions require a person or entity publishing to the public to disclose its legal identity on the document, and `name`, `specifier` and `entity_type` are the fields that carry that disclosure.
+
+Each party has the following sub-fields:
 
 | Sub-field     | Required | Description                                                        |
 | ------------- | -------- | ------------------------------------------------------------------ |
